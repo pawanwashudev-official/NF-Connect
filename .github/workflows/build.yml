@@ -2,9 +2,11 @@ name: Build NF Connect APK
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '**'   # run on push to any branch
   pull_request:
-    branches: [ main ]
+    branches:
+      - '**'   # run on PR targeting any branch
   workflow_dispatch:
 
 jobs:
