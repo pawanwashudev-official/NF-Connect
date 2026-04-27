@@ -52,7 +52,7 @@
   <string name="send_ping">Надіслати сигнал підтримання зв’язку</string>
   <string name="open_mpris_controls">Керування відтворенням</string>
   <string name="remotekeyboard_editing_only_title">Обробляти віддалені клавіші лише під час редагування</string>
-  <string name="remotekeyboard_not_connected">Немає активних з’єднань із віддаленою клавіатурою. Встановіть таке з’єднання у nfconnect.</string>
+  <string name="remotekeyboard_not_connected">Немає активних з’єднань із віддаленою клавіатурою. Встановіть таке з’єднання у NfConnect.</string>
   <string name="remotekeyboard_connected">З’єднання з віддаленою клавіатурою є активним</string>
   <string name="remotekeyboard_multiple_connections">Існує декілька з’єднань із віддаленою клавіатурою. Виберіть пристрій для налаштовування.</string>
   <string name="open_mousepad">Дистанційне введення</string>

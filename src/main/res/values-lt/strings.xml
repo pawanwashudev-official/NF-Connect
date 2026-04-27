@@ -44,7 +44,7 @@
   <string name="send_ping">Tikrinti ryšį</string>
   <string name="open_mpris_controls">Įvairialypės terpės valdymas</string>
   <string name="remotekeyboard_editing_only_title">Apdoroti nuotolinius klavišus tik redaguojant</string>
-  <string name="remotekeyboard_not_connected">Nėra jokio aktyvaus nuotolinės klaviatūros ryšio, užmegzkite jį naudodami nfconnect</string>
+  <string name="remotekeyboard_not_connected">Nėra jokio aktyvaus nuotolinės klaviatūros ryšio, užmegzkite jį naudodami NfConnect</string>
   <string name="remotekeyboard_connected">Nuotolinės klaviatūros ryšys yra aktyvus</string>
   <string name="remotekeyboard_multiple_connections">Yra daugiau nei vienas nuotolinės klaviatūros ryšys, pasirinkite kurį įrenginį konfigūruoti</string>
   <string name="open_mousepad">Nuotolinis įvedimas</string>

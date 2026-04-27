@@ -47,7 +47,7 @@
   <string name="send_ping">Изпращане на пинг</string>
   <string name="open_mpris_controls">Мултимедиен контрол</string>
   <string name="remotekeyboard_editing_only_title">Работете с отдалечените клавиши само при редактиране</string>
-  <string name="remotekeyboard_not_connected">Няма активна отдалечена клавиатура, установете такава в nfconnect</string>
+  <string name="remotekeyboard_not_connected">Няма активна отдалечена клавиатура, установете такава в NfConnect</string>
   <string name="remotekeyboard_connected">Отдалечената връзка с клавиатурата е активна</string>
   <string name="remotekeyboard_multiple_connections">Има повече от една отдалечена връзка за клавиатура, изберете устройството за конфигуриране</string>
   <string name="open_mousepad">Отдалечен вход</string>

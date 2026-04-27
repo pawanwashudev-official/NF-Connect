@@ -52,7 +52,7 @@
   <string name="send_ping">שליחת פינג</string>
   <string name="open_mpris_controls">בקרת מדיה</string>
   <string name="remotekeyboard_editing_only_title">השתמש במקשים מרוחקים רק בעת עריכה</string>
-  <string name="remotekeyboard_not_connected">אין מקלדת מרוחקת מופעלת, יש להפעיל אחת ב־nfconnect</string>
+  <string name="remotekeyboard_not_connected">אין מקלדת מרוחקת מופעלת, יש להפעיל אחת ב־NfConnect</string>
   <string name="remotekeyboard_connected">חיבור המקדלת המרוחקת פעיל</string>
   <string name="remotekeyboard_multiple_connections">ישנן כמה מקלדות מרוחקות מחוברות, נא לבחור את המכשיר להגדרה</string>
   <string name="open_mousepad">שליטה מרחוק</string>

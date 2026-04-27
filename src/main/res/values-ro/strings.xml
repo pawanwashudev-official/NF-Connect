@@ -50,7 +50,7 @@
   <string name="send_ping">Trimite ping</string>
   <string name="open_mpris_controls">Control multimedia</string>
   <string name="remotekeyboard_editing_only_title">Manipulează taste de la distanță numai la redactare</string>
-  <string name="remotekeyboard_not_connected">Nu e nicio conexiune activă de tastatură la distanță, stabiliți una în nfconnect</string>
+  <string name="remotekeyboard_not_connected">Nu e nicio conexiune activă de tastatură la distanță, stabiliți una în NfConnect</string>
   <string name="remotekeyboard_connected">Conexiunea de tastatură la distanță e activă</string>
   <string name="remotekeyboard_multiple_connections">Sunt mai multe conexiuni de tastatură la distanță, alegeți dispozitivul de configurat</string>
   <string name="open_mousepad">Introducere de la distanță</string>

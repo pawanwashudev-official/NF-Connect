@@ -50,7 +50,7 @@
   <string name="send_ping">Bidali ping</string>
   <string name="open_mpris_controls">Multimedia kontrola</string>
   <string name="remotekeyboard_editing_only_title">Erabili urruneko teklak editatzean besterik ez</string>
-  <string name="remotekeyboard_not_connected">Ez dago urruneko teklatuarekin konexio aktiborik, ezarri bat nfconnect erabiliz</string>
+  <string name="remotekeyboard_not_connected">Ez dago urruneko teklatuarekin konexio aktiborik, ezarri bat NfConnect erabiliz</string>
   <string name="remotekeyboard_connected">Urruneko teklatuarekin konexioa aktibo dago</string>
   <string name="remotekeyboard_multiple_connections">Urruneko teklatuekin konexio bat baino gehiago dago, hautatu konfiguratu beharreko gailua</string>
   <string name="open_mousepad">Urruneko sarrera</string>

@@ -50,7 +50,7 @@
   <string name="send_ping">Lähetä tiedustelupaketti</string>
   <string name="open_mpris_controls">Multimedian ohjaus</string>
   <string name="remotekeyboard_editing_only_title">Käsittele etänäppäimet vain muokattaessa</string>
-  <string name="remotekeyboard_not_connected">Etänäppäimistöyhteyksiä ei ole käytössä: muodosta yhteys nfconnectissa</string>
+  <string name="remotekeyboard_not_connected">Etänäppäimistöyhteyksiä ei ole käytössä: muodosta yhteys NfConnectissa</string>
   <string name="remotekeyboard_connected">Etänäppäimistöyhteys on käytössä</string>
   <string name="remotekeyboard_multiple_connections">Etänäppäimistöyhteyksiä on useampia: valitse asetettava laite</string>
   <string name="open_mousepad">Kauko-ohjaus</string>

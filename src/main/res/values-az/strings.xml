@@ -44,7 +44,7 @@
   <string name="send_ping">Dümsükləmək</string>
   <string name="open_mpris_controls">Multimedia idarə edilməsi</string>
   <string name="remotekeyboard_editing_only_title">Məsafədəki düymələri yalnız redaktə edərkən idarə edin</string>
-  <string name="remotekeyboard_not_connected">Aktiv bir uzaq klaviatura bağlantısı yoxdur, onu nfconnect-də yaradın</string>
+  <string name="remotekeyboard_not_connected">Aktiv bir uzaq klaviatura bağlantısı yoxdur, onu NfConnect-də yaradın</string>
   <string name="remotekeyboard_connected">Uzaq klaviatura bağlantısını aktiv edin</string>
   <string name="remotekeyboard_multiple_connections">Birdən çox uzaq klaviatura bağlantısı var, tənzimləmək üçün cihazı seçin</string>
   <string name="open_mousepad">Məsafədən giriş</string>

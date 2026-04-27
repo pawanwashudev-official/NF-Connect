@@ -45,7 +45,7 @@
   <string name="send_ping">Sendi ping</string>
   <string name="open_mpris_controls">Mastrumo de Aŭdvidaĵoj</string>
   <string name="remotekeyboard_editing_only_title">Pritrakti forajn klavojn nur dum redaktado</string>
-  <string name="remotekeyboard_not_connected">Ne estas aktiva fora klavara konekto, starigu unu en nfconnect</string>
+  <string name="remotekeyboard_not_connected">Ne estas aktiva fora klavara konekto, starigu unu en NfConnect</string>
   <string name="remotekeyboard_connected">Fora klavara konekto estas aktiva</string>
   <string name="remotekeyboard_multiple_connections">Estas pli ol unu fora klavara konekto, elektu la aparaton por agordi</string>
   <string name="open_mousepad">Fora enigo</string>

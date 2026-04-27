@@ -52,7 +52,7 @@
   <string name="send_ping">Wyślij ping</string>
   <string name="open_mpris_controls">Sterowanie odtwarzaczem</string>
   <string name="remotekeyboard_editing_only_title">Obsługuj zdalne naciśnięcia klawiszy tylko podczas edycji</string>
-  <string name="remotekeyboard_not_connected">Nie istnieje połączenie zdalnej klawiatury, nawiąż takie połączenie w nfconnect</string>
+  <string name="remotekeyboard_not_connected">Nie istnieje połączenie zdalnej klawiatury, nawiąż takie połączenie w NfConnect</string>
   <string name="remotekeyboard_connected">Połączenie zdalnej klawiatury jest nawiązane</string>
   <string name="remotekeyboard_multiple_connections">Nawiązano więcej niż jedno połączenie zdalnej klawiatury, wybierz urządzenie do ustawienia</string>
   <string name="open_mousepad">Zdalne sterowanie</string>

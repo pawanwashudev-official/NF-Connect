@@ -52,7 +52,7 @@
   <string name="send_ping">Invia ping</string>
   <string name="open_mpris_controls">Controllo multimediale</string>
   <string name="remotekeyboard_editing_only_title">Gestisci i tasti remoti solo durante la modifica</string>
-  <string name="remotekeyboard_not_connected">Non c\'è una connessione attiva della tastiera remota, stabiliscine una da nfconnect</string>
+  <string name="remotekeyboard_not_connected">Non c\'è una connessione attiva della tastiera remota, stabiliscine una da NfConnect</string>
   <string name="remotekeyboard_connected">La connessione della tastiera remota è attiva</string>
   <string name="remotekeyboard_multiple_connections">Ci sono più connessioni di tastiere remote, seleziona il dispositivo da configurare</string>
   <string name="open_mousepad">Impulso remoto</string>

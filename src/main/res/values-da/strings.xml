@@ -29,7 +29,7 @@
   <string name="send_ping">Send ping</string>
   <string name="open_mpris_controls">Multimediekontrol</string>
   <string name="remotekeyboard_editing_only_title">Håndtér kun eksterne tastetryk under redigering</string>
-  <string name="remotekeyboard_not_connected">Der er ingen aktiv ekstern tastaturforbindelse. Opret en i nfconnect</string>
+  <string name="remotekeyboard_not_connected">Der er ingen aktiv ekstern tastaturforbindelse. Opret en i NfConnect</string>
   <string name="remotekeyboard_connected">Ekstern tastaturforbindelse er aktiv</string>
   <string name="remotekeyboard_multiple_connections">Der er mere end en ekstern tastaturforbindelse, vælg den enhed der skal konfigureres</string>
   <string name="open_mousepad">Eksternt input</string>

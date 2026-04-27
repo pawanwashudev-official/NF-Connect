@@ -44,7 +44,7 @@
   <string name="send_ping">Enviar um pedido de contacto</string>
   <string name="open_mpris_controls">Comando multimédia</string>
   <string name="remotekeyboard_editing_only_title">Lidar com as teclas remotas apenas na edição</string>
-  <string name="remotekeyboard_not_connected">Não existe nenhuma ligação activa a teclados remotos - crie uma no \'nfconnect\'</string>
+  <string name="remotekeyboard_not_connected">Não existe nenhuma ligação activa a teclados remotos - crie uma no \'NfConnect\'</string>
   <string name="remotekeyboard_connected">A ligação ao teclado remoto está activa</string>
   <string name="remotekeyboard_multiple_connections">Existe mais que uma ligação a teclados remotos; seleccione o dispositivo a configurar</string>
   <string name="open_mousepad">Introdução remota de dados</string>

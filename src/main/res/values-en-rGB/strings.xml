@@ -45,7 +45,7 @@
   <string name="send_ping">Send ping</string>
   <string name="open_mpris_controls">Multimedia control</string>
   <string name="remotekeyboard_editing_only_title">Handle remote keys only when editing</string>
-  <string name="remotekeyboard_not_connected">There is no active remote keyboard connection, establish one in nfconnect</string>
+  <string name="remotekeyboard_not_connected">There is no active remote keyboard connection, establish one in NfConnect</string>
   <string name="remotekeyboard_connected">Remote keyboard connection is active</string>
   <string name="remotekeyboard_multiple_connections">There is more than one remote keyboard connection, select the device to configure</string>
   <string name="open_mousepad">Remote input</string>

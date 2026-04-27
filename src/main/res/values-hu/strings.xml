@@ -44,7 +44,7 @@
   <string name="send_ping">Ping küldése</string>
   <string name="open_mpris_controls">Multimédiavezérlés</string>
   <string name="remotekeyboard_editing_only_title">Távoli billentyűk kezelése csak szerkesztéskor</string>
-  <string name="remotekeyboard_not_connected">Nincs aktív távoli billentyűzetkapcsolat, létesítsen egyet a nfconnectben</string>
+  <string name="remotekeyboard_not_connected">Nincs aktív távoli billentyűzetkapcsolat, létesítsen egyet a NfConnectben</string>
   <string name="remotekeyboard_connected">Távoli billentyűzetkapcsolat aktív</string>
   <string name="remotekeyboard_multiple_connections">Több, mint egy távoli billentyűzetkapcsolat van, válassza ki a beállítandó eszközt</string>
   <string name="open_mousepad">Távirányítás</string>

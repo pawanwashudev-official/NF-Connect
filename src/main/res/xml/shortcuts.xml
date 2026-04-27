@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
-    <share-target android:targetClass="org.kde.nfconnect.plugins.share.ShareActivity">
+    <share-target android:targetClass="com.neubofy.nfconnect.plugins.share.ShareActivity">
         <data android:mimeType="*/*" />
-        <category android:name="org.kde.nfconnect.category.SHARE_TARGET" />
+        <category android:name="com.neubofy.nfconnect.category.SHARE_TARGET" />
     </share-target>
 </shortcuts>

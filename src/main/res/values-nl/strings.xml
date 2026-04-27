@@ -52,7 +52,7 @@
   <string name="send_ping">Ping verzenden</string>
   <string name="open_mpris_controls">Bediening van multimedia</string>
   <string name="remotekeyboard_editing_only_title">Behandel toetsen op afstand alleen bij bewerken</string>
-  <string name="remotekeyboard_not_connected">Er is geen actieve verbinding met een toetsenbord op afstand, maak er een in nfconnect</string>
+  <string name="remotekeyboard_not_connected">Er is geen actieve verbinding met een toetsenbord op afstand, maak er een in NfConnect</string>
   <string name="remotekeyboard_connected">Verbinding met toetsenbord op afstand is actief</string>
   <string name="remotekeyboard_multiple_connections">Er is meer dan een verbinding met een toetsenbord op afstand, selecteer het te configureren apparaat</string>
   <string name="open_mousepad">Invoer op afstand</string>

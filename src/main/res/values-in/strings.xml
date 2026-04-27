@@ -44,7 +44,7 @@
   <string name="send_ping">Kirim ping</string>
   <string name="open_mpris_controls">Kendali multimedia</string>
   <string name="remotekeyboard_editing_only_title">Menangani tombol jarak jauh hanya ketika mengedit</string>
-  <string name="remotekeyboard_not_connected">Tidak ada koneksi keyboard jarak jauh yang aktif, buat satu dalam nfconnect</string>
+  <string name="remotekeyboard_not_connected">Tidak ada koneksi keyboard jarak jauh yang aktif, buat satu dalam NfConnect</string>
   <string name="remotekeyboard_connected">Koneksi keyboard jarak jauh telah aktif</string>
   <string name="remotekeyboard_multiple_connections">Ada lebih dari satu koneksi keyboard jarak jauh, pilih peranti untuk diatur</string>
   <string name="open_mousepad">Masukan jarak jauh</string>

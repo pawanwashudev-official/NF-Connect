@@ -52,7 +52,7 @@
   <string name="send_ping">Odoslať ping</string>
   <string name="open_mpris_controls">Multimediálny ovládač</string>
   <string name="remotekeyboard_editing_only_title">Spracovať vzdialené klávesy iba počas upravovania</string>
-  <string name="remotekeyboard_not_connected">Nie je žiadne aktívne pripojenie k vzdialenej klávesnici. Vytvorte nejaké v aplikácii nfconnect</string>
+  <string name="remotekeyboard_not_connected">Nie je žiadne aktívne pripojenie k vzdialenej klávesnici. Vytvorte nejaké v aplikácii NfConnect</string>
   <string name="remotekeyboard_connected">Pripojenie k vzdialenej klávesnici je aktívne</string>
   <string name="remotekeyboard_multiple_connections">Je dostupných viac pripojení k vzdialeným klávesniciam, vyberte zariadenie na nastavenie</string>
   <string name="open_mousepad">Vzdialený vstup</string>

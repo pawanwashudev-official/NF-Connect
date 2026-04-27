@@ -6,46 +6,46 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
 
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- NoActionBar because we use a Toolbar widget as ActionBar -->
-    <style name="nfconnectThemeBase" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+    <style name="NfConnectThemeBase" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
         <!-- The main color attributes -->
         <!-- Drawable definitions and overrides -->
 
-        <item name="materialCardViewStyle">@style/nfconnectCardStyle</item>
+        <item name="materialCardViewStyle">@style/NfConnectCardStyle</item>
 
         <!-- https://github.com/material-components/material-components-android/issues/2732 -->
-        <item name="alertDialogTheme">@style/nfconnectDialogStyle</item>
+        <item name="alertDialogTheme">@style/NfConnectDialogStyle</item>
     </style>
 
-    <style name="nfconnectTheme" parent="nfconnectThemeBase" />
+    <style name="NfConnectTheme" parent="NfConnectThemeBase" />
 
-    <style name="nfconnectThemeBase.NoActionBar" parent="nfconnectTheme">
+    <style name="NfConnectThemeBase.NoActionBar" parent="NfConnectTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="nfconnectTheme.NoActionBar" parent="nfconnectThemeBase.NoActionBar" />
+    <style name="NfConnectTheme.NoActionBar" parent="NfConnectThemeBase.NoActionBar" />
 
-    <style name="nfconnectTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="NfConnectTheme.Toolbar" parent="Widget.AppCompat.Toolbar">
     </style>
 
-    <style name="nfconnectDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+    <style name="NfConnectDialogStyle" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="android:layout" tools:ignore="PrivateResource">@layout/m3_alert_dialog</item>
         <item name="dialogCornerRadius" tools:ignore="PrivateResource">@dimen/m3_alert_dialog_corner_size</item>
     </style>
 
-    <style name="nfconnectCardStyle" parent="@style/Widget.Material3.CardView.Elevated"/>
+    <style name="NfConnectCardStyle" parent="@style/Widget.Material3.CardView.Elevated"/>
 
-    <style name="nfconnectCardStyle.Filled" parent="@style/Widget.Material3.CardView.Filled"/>
+    <style name="NfConnectCardStyle.Filled" parent="@style/Widget.Material3.CardView.Filled"/>
 
     <style name="MainNavigationView">
     </style>
 
-    <style name="nfconnectButton.IconButton" parent="Widget.Material3.Button.IconButton.Filled">
+    <style name="NfConnectButton.IconButton" parent="Widget.Material3.Button.IconButton.Filled">
         <item name="iconGravity">textStart</item>
         <item name="cornerRadius">24dp</item>
     </style>
 
-    <style name="nfconnectButton.IconButton.Secondary" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+    <style name="NfConnectButton.IconButton.Secondary" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
         <item name="iconGravity">textStart</item>
         <item name="cornerRadius">12dp</item>
     </style>

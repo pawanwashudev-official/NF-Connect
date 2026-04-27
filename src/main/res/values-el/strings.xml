@@ -43,7 +43,7 @@
   <string name="send_ping">Αποστολή ping</string>
   <string name="open_mpris_controls">Έλεγχος πολυμέσων</string>
   <string name="remotekeyboard_editing_only_title">Χειρισμός απομακρυσμένων πλήκτρων μόνο στην επεξεργασία</string>
-  <string name="remotekeyboard_not_connected">Δεν υπάρχει ενεργή σύνδεση με απομακρυσμένο πληκτρολόγιο, άνοιξε μία στο nfconnect</string>
+  <string name="remotekeyboard_not_connected">Δεν υπάρχει ενεργή σύνδεση με απομακρυσμένο πληκτρολόγιο, άνοιξε μία στο NfConnect</string>
   <string name="remotekeyboard_connected">Η σύνδεση με απομακρυσμένο πληκτρολόγιο είναι ενεργή</string>
   <string name="remotekeyboard_multiple_connections">Υπάρχουν περισσότερες της μίας συνδέσεις με απομακρυσμένο πληκτρολόγιο, επιλέξτε ποια συσκευή θα διαμορφώσετε</string>
   <string name="open_mousepad">Απομακρυσμένη είσοδος στοιχείων</string>

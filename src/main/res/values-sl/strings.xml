@@ -52,7 +52,7 @@
   <string name="send_ping">Pošlji ping</string>
   <string name="open_mpris_controls">Upravljanje večpredstavnosti</string>
   <string name="remotekeyboard_editing_only_title">Oddaljene tipke uporabljajte samo med urejanjem</string>
-  <string name="remotekeyboard_not_connected">Ni dejavne povezave z oddaljeno tipkovnico, vzpostavite jo v nfconnectu</string>
+  <string name="remotekeyboard_not_connected">Ni dejavne povezave z oddaljeno tipkovnico, vzpostavite jo v NfConnectu</string>
   <string name="remotekeyboard_connected">Povezava z oddaljeno tipkovnico je dejavna</string>
   <string name="remotekeyboard_multiple_connections">Obstaja več kot ena povezava na oddaljeno tipkovnico, izberite napravo in nastavitve</string>
   <string name="open_mousepad">Oddaljeni input</string>
