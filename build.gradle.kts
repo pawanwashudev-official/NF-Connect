@@ -30,7 +30,7 @@ val licenseResDir = "$projectDir/build/dependency-license-res"
 
 kotlin {
     compilerOptions {
-        jvmTarget = JvmTarget.JVM_11
+        jvmTarget = JvmTarget.JVM_17
     }
 }
 
@@ -41,8 +41,9 @@ android {
         applicationId = "com.neubofy.nfconnect"
         minSdk = 23
         targetSdk = 35
-        versionCode = 13505
-        versionName = "1.35.5"
+        versionCode = 10000
+        versionName = "1.0.0"
+        resConfigs("en")
         proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
     }
     buildFeatures {
@@ -56,15 +57,15 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
 
         // Flag to enable support for the new language APIs
         isCoreLibraryDesugaringEnabled = true
     }
 
     androidResources {
-        generateLocaleConfig = true
+        generateLocaleConfig = false
     }
 
     packaging {

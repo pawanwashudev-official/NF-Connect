@@ -1,37 +1,29 @@
 # NF Connect - Android app
 
-NF Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
+NF Connect is a multi-platform app that allows your devices to communicate (e.g., your phone and your computer).
 
 ## (Some) Features
 - **Shared clipboard**: copy and paste between your phone and your computer (or any other device).
 - **Notification sync**: Read and reply to your Android notifications from the desktop.
 - **Share files and URLs** instantly from one device to another.
-- **Multimedia remote control**: Use your phone as a remote for Linux media players.
+- **Multimedia remote control**: Use your phone as a remote for media players.
 - **Virtual touchpad**: Use your phone screen as your computer's touchpad and keyboard.
 
 All this without wires, over the already existing Wi-Fi network, and using TLS encryption.
 
 ## About this app
 
-This is a native Android port of the NF Connect Qt app. You will find a more complete readme about NF Connect [here](https://github.com/pawanwashudev-official/NF-Connect).
+This is the official Android app for NF Connect. You will find more information about the NF Connect ecosystem [here](https://github.com/pawanwashudev-official/NF-Connect).
 
 ## How to install this app
 
-You can install this app from the [Play Store](https://play.google.com/store/apps/details?id=com.neubofy.nfconnect) as well as [F-Droid](https://f-droid.org/repository/browse/?fdid=com.neubofy.nfconnect). Note you will also need to install the [desktop app](https://github.com/pawanwashudev-official/NF-Connect) for it to work.
+You can install this app from the [GitHub Releases](https://github.com/pawanwashudev-official/NF-Connect/releases). Note you will also need to install the [desktop app](https://github.com/pawanwashudev-official/NF-Connect) for it to work.
 
 ## Contributing
 
-A lot of useful information, including how to get started working on NF Connect and how to connect with the current developers, is on our [KDE Community Wiki page](https://github.com/pawanwashudev-official/NF-Connect)
+For bug reporting, please use [GitHub Issues](https://github.com/pawanwashudev-official/NF-Connect/issues).
 
-For bug reporting, please use [GitHub Issues](https://github.com/pawanwashudev-official/NF-Connect/issues). Please do not use the issue tracker in GitLab since we want to keep everything in one place.
-
-To contribute patches, use [NF Connect's Gitlab](https://github.com/pawanwashudev-official/NF-Connect).
-On Gitlab (as well as on our [old Phabricator](https://phabricator.kde.org/tag/kde_connect/)) you can find a task list with stuff to do and links to other relevant resources.
-It is a good idea to also subscribe to the [NF Connect mailing list](https://mail.kde.org/mailman/listinfo/nfconnect).
-
-Please know that all translations for all KDE apps are handled by the [localization team](https://l10n.kde.org/). If you would like to submit a translation, that should be done by working with the proper team for that language.
+To contribute patches or new features, please submit a Pull Request to our [GitHub repository](https://github.com/pawanwashudev-official/NF-Connect).
 
 ## License
 [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html) and [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)
-
-If you are reading this from GitHub, you should know that this is just a mirror of the [KDE Project repo](https://github.com/pawanwashudev-official/NF-Connect).

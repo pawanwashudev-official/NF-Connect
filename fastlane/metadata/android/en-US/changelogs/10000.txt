@@ -1,0 +1,7 @@
+1.0.0:
+- Official v1.0.0 release of NF Connect.
+- Rebranded to NF Connect and Neubofy ecosystem.
+- Optimized for Android 16 (API 36) and modern design standards.
+- Streamlined distribution: removed multiple localizations to focus on US English.
+- Build system improvements with JDK 21 support.
+- Fixed various resource synchronization issues.

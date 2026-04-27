@@ -105,7 +105,7 @@ object SslHelper {
             val nameBuilder = X500NameBuilder(BCStyle.INSTANCE)
             nameBuilder.addRDN(BCStyle.CN, deviceId)
             nameBuilder.addRDN(BCStyle.OU, "NF Connect")
-            nameBuilder.addRDN(BCStyle.O, "KDE")
+            nameBuilder.addRDN(BCStyle.O, "Neubofy")
             val localDate = LocalDate.now()
             val notBefore = localDate.minusYears(1).atStartOfDay(ZoneId.systemDefault()).toInstant()
             val notAfter = localDate.plusYears(10).atStartOfDay(ZoneId.systemDefault()).toInstant()
