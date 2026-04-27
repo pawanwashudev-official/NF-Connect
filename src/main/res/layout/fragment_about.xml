@@ -127,7 +127,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/about_kde_button"
+                android:id="@+id/about_nf_button"
                 style="@style/AboutButton">
 
                 <TextView
