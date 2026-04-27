@@ -22,7 +22,7 @@ import com.neubofy.nfconnect.databinding.ActivityEasterEggBinding
 import kotlin.math.PI
 import kotlin.math.atan2
 
-private val KDE_ICON_BACKGROUND_COLOR = Color.rgb(29, 153, 243)
+private val NF_ICON_BACKGROUND_COLOR = Color.rgb(61, 174, 233)
 private val KONQI_BACKGROUND_COLOR = Color.rgb(191, 255, 0)
 
 class EasterEggActivity : AppCompatActivity(), SensorEventListener {
@@ -38,7 +38,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
 
-        setBgColor(KDE_ICON_BACKGROUND_COLOR)
+        setBgColor(NF_ICON_BACKGROUND_COLOR)
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         if (hasAccelerometer()) {
@@ -76,7 +76,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
                     R.drawable.ic_next_black, R.drawable.ic_previous_black,
                     R.drawable.ic_presenter_24dp, R.drawable.ic_key,
                     R.drawable.ic_keyboard_return_black_24dp, R.drawable.ic_keyboard_hide_36dp,
-                    R.drawable.ic_kde_24dp, R.drawable.ic_album_art_placeholder,
+                    R.drawable.ic_nf_24dp, R.drawable.ic_album_art_placeholder,
                     R.drawable.ic_arrow_back_black_24dp, R.drawable.share_plugin_action_24dp
             ).random()
 
@@ -85,7 +85,7 @@ class EasterEggActivity : AppCompatActivity(), SensorEventListener {
                 setBgColor(KONQI_BACKGROUND_COLOR)
             } else {
                 binding!!.logo.setColorFilter(ContextCompat.getColor(this, android.R.color.white))
-                setBgColor(KDE_ICON_BACKGROUND_COLOR)
+                setBgColor(NF_ICON_BACKGROUND_COLOR)
             }
 
             binding!!.logo.setImageResource(icon)
