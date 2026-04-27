@@ -80,7 +80,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/NfConnectTheme.NoActionBar"
+        android:theme="@style/nfconnectTheme.NoActionBar"
         android:name="com.neubofy.nfconnect.NfConnect"
         android:enableOnBackInvokedCallback="true"
         android:requestLegacyExternalStorage="true"> <!-- requestLegacyExternalStorage is only used in Android 10: https://developer.android.com/training/data-storage/use-cases#opt-out-in-production-app -->
@@ -128,6 +128,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.APP_MUSIC" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
