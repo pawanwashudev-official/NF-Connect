@@ -654,8 +654,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     <string name="presenter_volume_keys_foreground_tip">You can leave the screen on to use the volume keys to go to the previous/next slide</string>
     <string name="presenter_volume_keys_tip">You can leave the screen on or lock your device to use the volume keys to go to the previous/next slide</string>
 
-    <string name="confirm_run_command">Are you sure you want to run %1$s?</string>
-    <string name="runcommand">Run Command</string>
     <string name="about_kde">About KDE</string>
     <string name="about_kde_about">About KDE Info</string>
     <string name="about_kde_join_kde">Join KDE</string>
@@ -673,4 +671,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     <string name="sftp_sdcard_num">SD Card %1$d</string>
     <string name="take_picture">Take Picture</string>
     <string name="kde_connect">NF Connect</string>
+    <string name="confirm_run_command">Are you sure you want to run %1$s?</string>
+    <string name="runcommand">Run Command</string>
 </resources>

@@ -78,10 +78,10 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         getBinding().runCommandsList.setAdapter(adapter);
         getBinding().runCommandsList.setOnItemClickListener((adapterView, view1, i, l) -> {
             new androidx.appcompat.app.AlertDialog.Builder(RunCommandActivity.this)
-                .setTitle(com.neubofy.nfconnect_tp.R.string.runcommand)
-                .setMessage(getString(com.neubofy.nfconnect_tp.R.string.confirm_run_command, commandItems.get(i).getName()))
-                .setPositiveButton(com.neubofy.nfconnect_tp.R.string.ok, (dialog, which) -> plugin.runCommand(commandItems.get(i).getKey()))
-                .setNegativeButton(com.neubofy.nfconnect_tp.R.string.cancel, null)
+                .setTitle(com.neubofy.nfconnect.R.string.runcommand)
+                .setMessage(getString(com.neubofy.nfconnect.R.string.confirm_run_command, commandItems.get(i).getName()))
+                .setPositiveButton(com.neubofy.nfconnect.R.string.ok, (dialog, which) -> plugin.runCommand(commandItems.get(i).getKey()))
+                .setNegativeButton(com.neubofy.nfconnect.R.string.cancel, null)
                 .show();
         });
 

@@ -10,7 +10,7 @@ import android.view.View
 import org.json.JSONException
 import org.json.JSONObject
 import com.neubofy.nfconnect.ui.list.EntryItem
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import android.widget.TextView
 
 open class CommandEntry(name: String, cmd: String, val key: String) : EntryItem(name, cmd)  {
