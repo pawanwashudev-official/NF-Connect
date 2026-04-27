@@ -76,8 +76,14 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         ListAdapter adapter = new ListAdapter(RunCommandActivity.this, commandItems);
 
         getBinding().runCommandsList.setAdapter(adapter);
-        getBinding().runCommandsList.setOnItemClickListener((adapterView, view1, i, l) ->
-                plugin.runCommand(commandItems.get(i).getKey()));
+        getBinding().runCommandsList.setOnItemClickListener((adapterView, view1, i, l) -> {
+            new AlertDialog.Builder(RunCommandActivity.this)
+                    .setTitle(R.string.pref_plugin_runcommand)
+                    .setMessage(commandItems.get(i).getName() + "?")
+                    .setPositiveButton(R.string.ok, (dialog, which) -> plugin.runCommand(commandItems.get(i).getKey()))
+                    .setNegativeButton(R.string.cancel, null)
+                    .show();
+        });
 
         String text = getString(R.string.addcommand_explanation);
         if (!plugin.canAddCommand()) {
