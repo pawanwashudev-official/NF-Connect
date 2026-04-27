@@ -76,8 +76,15 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         ListAdapter adapter = new ListAdapter(RunCommandActivity.this, commandItems);
 
         getBinding().runCommandsList.setAdapter(adapter);
-        getBinding().runCommandsList.setOnItemClickListener((adapterView, view1, i, l) ->
-                plugin.runCommand(commandItems.get(i).getKey()));
+        getBinding().runCommandsList.setOnItemClickListener((adapterView, view1, i, l) -> {
+            CommandEntry entry = commandItems.get(i);
+            new com.google.android.material.dialog.MaterialAlertDialogBuilder(RunCommandActivity.this)
+                    .setTitle(entry.getName())
+                    .setMessage("Are you sure you want to run this command?")
+                    .setPositiveButton(R.string.ok, (dialog, which) -> plugin.runCommand(entry.getKey()))
+                    .setNegativeButton(R.string.cancel, null)
+                    .show();
+        });
 
         String text = getString(R.string.addcommand_explanation);
         if (!plugin.canAddCommand()) {

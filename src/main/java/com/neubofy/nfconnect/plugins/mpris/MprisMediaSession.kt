@@ -441,7 +441,18 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
         // Display the notification
         synchronized(instance) {
             val mediaSession = mediaSession ?: MediaSessionCompat(context!!, MPRIS_MEDIA_SESSION_TAG).apply {
+                setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS or MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS)
                 setCallback(mediaSessionCallback, Handler(context!!.mainLooper))
+                val sessionIntent = Intent(context!!, MprisActivity::class.java).apply {
+                    putExtra("deviceId", currentDeviceId)
+                }
+                val pendingIntent = PendingIntent.getActivity(
+                    context!!,
+                    0,
+                    sessionIntent,
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                )
+                setSessionActivity(pendingIntent)
             }
             mediaSession.setMetadata(metadata.build())
             mediaSession.setPlaybackState(playbackState.build())
