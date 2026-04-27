@@ -131,8 +131,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 style="@style/AboutButton">
 
                 <TextView
-                    android:text="@string/about_kde"
-                    app:drawableTopCompat="@drawable/ic_kde_24dp"
+                    android:text="@string/about_neubofy"
+                    app:drawableTopCompat="@drawable/ic_nf_24dp"
                     style="@style/AboutButton.TextView" />
             </FrameLayout>
 
