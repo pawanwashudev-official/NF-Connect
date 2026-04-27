@@ -42,7 +42,7 @@ public abstract class BaseLinkProvider {
      */
     @WorkerThread
     protected void onConnectionReceived(@NonNull final BaseLink link) {
-        //Log.i("KDE/LinkProvider", "onConnectionReceived");
+        //Log.i("NF/LinkProvider", "onConnectionReceived");
         for(ConnectionReceiver cr : connectionReceivers) {
             cr.onConnectionReceived(link);
         }
@@ -53,7 +53,7 @@ public abstract class BaseLinkProvider {
      */
     @WorkerThread
     public void onConnectionLost(BaseLink link) {
-        //Log.i("KDE/LinkProvider", "connectionLost");
+        //Log.i("NF/LinkProvider", "connectionLost");
         for(ConnectionReceiver cr : connectionReceivers) {
             cr.onConnectionLost(link);
         }

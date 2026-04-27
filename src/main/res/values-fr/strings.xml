@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="kde_connect">NfConnect</string>
+  <string name="nf_connect">NfConnect</string>
   <string name="manifest_label_share">Envoyer vers un périphérique</string>
   <string name="foreground_notification_no_devices">Connecté à aucun périphérique</string>
   <string name="foreground_notification_devices">Connecté à : %s</string>

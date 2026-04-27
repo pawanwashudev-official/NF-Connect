@@ -99,12 +99,12 @@ public class LanLinkProvider extends BaseLinkProvider {
         try {
             identityPacket = NetworkPacket.unserialize(message);
         } catch (JSONException e) {
-            Log.w("KDE/LanLinkProvider", "Invalid identity packet received: " + e.getMessage());
+            Log.w("NF/LanLinkProvider", "Invalid identity packet received: " + e.getMessage());
             return null;
         }
 
         if (!DeviceInfo.isValidIdentityPacket(identityPacket)) {
-            Log.w("KDE/LanLinkProvider", "Invalid identity packet received.");
+            Log.w("NF/LanLinkProvider", "Invalid identity packet received.");
             return null;
         }
 
@@ -122,7 +122,7 @@ public class LanLinkProvider extends BaseLinkProvider {
 
         boolean deviceTrusted = TrustedDevices.isTrustedDevice(context, deviceId);
         if (!deviceTrusted && !TrustedNetworkHelper.isTrustedNetwork(context)) {
-            Log.i("KDE/LanLinkProvider", "Ignoring identity packet because the device is not trusted and I'm not on a trusted network.");
+            Log.i("NF/LanLinkProvider", "Ignoring identity packet because the device is not trusted and I'm not on a trusted network.");
             return null;
         }
 
@@ -153,7 +153,7 @@ public class LanLinkProvider extends BaseLinkProvider {
             message = readLineBounded(socket.getInputStream(), MAX_IDENTITY_PACKET_SIZE);
             //Log.e("TcpListener", "Received TCP packet: " + message);
         } catch (Exception e) {
-            Log.e("KDE/LanLinkProvider", "Exception while receiving TCP packet", e);
+            Log.e("NF/LanLinkProvider", "Exception while receiving TCP packet", e);
             return;
         }
 
@@ -164,16 +164,16 @@ public class LanLinkProvider extends BaseLinkProvider {
         final NetworkPacket identityPacket = pair.first;
         final boolean deviceTrusted = pair.second;
 
-        Log.i("KDE/LanLinkProvider", "identity packet received from a TCP connection from " + identityPacket.getString("deviceName"));
+        Log.i("NF/LanLinkProvider", "identity packet received from a TCP connection from " + identityPacket.getString("deviceName"));
 
         String targetDeviceId = identityPacket.getStringOrNull("targetDeviceId");
         Integer targetProtocolVersion = identityPacket.getIntOrNull("targetProtocolVersion");
         if (targetDeviceId != null && !targetDeviceId.equals(DeviceHelper.getDeviceId(context))) {
-            Log.e("KDE/LanLinkProvider","Received a connection request for a device that isn't me: " + targetDeviceId);
+            Log.e("NF/LanLinkProvider","Received a connection request for a device that isn't me: " + targetDeviceId);
             return;
         }
         if (targetProtocolVersion != null && targetProtocolVersion != DeviceHelper.PROTOCOL_VERSION) {
-            Log.e("KDE/LanLinkProvider","Received a connection request for a protocol version that isn't mine: " + targetProtocolVersion);
+            Log.e("NF/LanLinkProvider","Received a connection request for a protocol version that isn't mine: " + targetProtocolVersion);
             return;
         }
 
@@ -231,7 +231,7 @@ public class LanLinkProvider extends BaseLinkProvider {
         final NetworkPacket identityPacket = pair.first;
         final boolean deviceTrusted = pair.second;
 
-        Log.i("KDE/LanLinkProvider", "Broadcast identity packet received from " + identityPacket.getString("deviceName"));
+        Log.i("NF/LanLinkProvider", "Broadcast identity packet received from " + identityPacket.getString("deviceName"));
 
         int tcpPort = identityPacket.getInt("tcpPort", MIN_PORT);
         if (tcpPort < MIN_PORT || tcpPort > MAX_PORT) {
@@ -278,16 +278,16 @@ public class LanLinkProvider extends BaseLinkProvider {
         final int protocolVersion = identityPacket.getInt("protocolVersion");
 
         if (deviceTrusted && isProtocolDowngrade(deviceId, protocolVersion)) {
-            Log.w("KDE/LanLinkProvider", "Refusing to connect to a device using an older protocol version:" + protocolVersion);
+            Log.w("NF/LanLinkProvider", "Refusing to connect to a device using an older protocol version:" + protocolVersion);
             return;
         }
 
         if (deviceTrusted && !TrustedDevices.isCertificateStored(context, deviceId)) {
-            Log.e("KDE/LanLinkProvider", "Device trusted but no cert stored. This should not happen.");
+            Log.e("NF/LanLinkProvider", "Device trusted but no cert stored. This should not happen.");
             return;
         }
 
-        Log.i("KDE/LanLinkProvider", "Starting SSL handshake with " + deviceId + " trusted:" + deviceTrusted);
+        Log.i("NF/LanLinkProvider", "Starting SSL handshake with " + deviceId + " trusted:" + deviceTrusted);
 
         // If I'm the TCP server I will be the SSL client and vice-versa.
         final boolean clientMode = (connectionStarted == LanLink.ConnectionStarted.Locally);
@@ -309,19 +309,19 @@ public class LanLinkProvider extends BaseLinkProvider {
                         // Do not trust the identity packet we received unencrypted
                         secureIdentityPacket = NetworkPacket.unserialize(line);
                         if (!DeviceInfo.isValidIdentityPacket(secureIdentityPacket)) {
-                            Log.e("KDE/LanLinkProvider", "Identity packet isn't valid");
+                            Log.e("NF/LanLinkProvider", "Identity packet isn't valid");
                             sslSocket.close();
                             return;
                         }
                         int newProtocolVersion = secureIdentityPacket.getInt("protocolVersion");
                         if (newProtocolVersion != protocolVersion) {
-                            Log.e("KDE/LanLinkProvider", "Protocol version changed half-way through the handshake: " + protocolVersion + " -> " + newProtocolVersion);
+                            Log.e("NF/LanLinkProvider", "Protocol version changed half-way through the handshake: " + protocolVersion + " -> " + newProtocolVersion);
                             sslSocket.close();
                             return;
                         }
                         String newDeviceId = secureIdentityPacket.getString("deviceId");
                         if (!newDeviceId.equals(deviceId)) {
-                            Log.e("KDE/LanLinkProvider", "Device ID changed half-way through the handshake: " + deviceId + " -> " + newDeviceId);
+                            Log.e("NF/LanLinkProvider", "Device ID changed half-way through the handshake: " + deviceId + " -> " + newDeviceId);
                             sslSocket.close();
                             return;
                         }
@@ -330,13 +330,13 @@ public class LanLinkProvider extends BaseLinkProvider {
                     }
                     Certificate certificate = event.getPeerCertificates()[0];
                     DeviceInfo deviceInfo = DeviceInfo.fromIdentityPacketAndCert(secureIdentityPacket, certificate);
-                    Log.i("KDE/LanLinkProvider", "Handshake as " + mode + " successful with " + deviceInfo.name + " secured with " + event.getCipherSuite());
+                    Log.i("NF/LanLinkProvider", "Handshake as " + mode + " successful with " + deviceInfo.name + " secured with " + event.getCipherSuite());
                     addOrUpdateLink(sslSocket, deviceInfo);
                 } catch (JSONException e) {
-                    Log.e("KDE/LanLinkProvider", "Remote device doesn't correctly implement protocol version 8", e);
+                    Log.e("NF/LanLinkProvider", "Remote device doesn't correctly implement protocol version 8", e);
                     try { sslSocket.close(); } catch (IOException ignored) { }
                 } catch (IOException e) {
-                    Log.e("KDE/LanLinkProvider", "Handshake as " + mode + " failed with " + deviceId, e);
+                    Log.e("NF/LanLinkProvider", "Handshake as " + mode + " failed with " + deviceId, e);
                     try { sslSocket.close(); } catch (IOException ignored) { }
                 }
             });
@@ -369,12 +369,12 @@ public class LanLinkProvider extends BaseLinkProvider {
                 return;
             }
             // Update existing link
-            Log.d("KDE/LanLinkProvider", "Reusing same link for device " + deviceInfo.id);
+            Log.d("NF/LanLinkProvider", "Reusing same link for device " + deviceInfo.id);
             link.reset(socket, deviceInfo);
             onDeviceInfoUpdated(deviceInfo);
         } else {
             // Create a new link
-            Log.d("KDE/LanLinkProvider", "Creating a new link for device " + deviceInfo.id);
+            Log.d("NF/LanLinkProvider", "Creating a new link for device " + deviceInfo.id);
             link = new LanLink(context, deviceInfo, this, socket);
             visibleDevices.put(deviceInfo.id, link);
             onConnectionReceived(link);
@@ -456,12 +456,12 @@ public class LanLinkProvider extends BaseLinkProvider {
         while (tcpPort <= MAX_PORT) {
             try {
                 ServerSocket candidateServer = new ServerSocket(tcpPort);
-                Log.i("KDE/LanLink", "Using port " + tcpPort);
+                Log.i("NF/LanLink", "Using port " + tcpPort);
                 return candidateServer;
             } catch (IOException e) {
                 tcpPort++;
                 if (tcpPort == MAX_PORT) {
-                    Log.e("KDE/LanLink", "No ports available");
+                    Log.e("NF/LanLink", "No ports available");
                     throw e; //Propagate exception
                 }
             }
@@ -514,7 +514,7 @@ public class LanLinkProvider extends BaseLinkProvider {
         try {
             bytes = identity.serialize().getBytes(Charsets.UTF_8);
         } catch (JSONException e) {
-            Log.e("KDE/LanLinkProvider", "Failed to serialize identity packet", e);
+            Log.e("NF/LanLinkProvider", "Failed to serialize identity packet", e);
             return;
         }
 
@@ -532,16 +532,16 @@ public class LanLinkProvider extends BaseLinkProvider {
             socket.setReuseAddress(true);
             socket.setBroadcast(true);
         } catch (SocketException e) {
-            Log.e("KDE/LanLinkProvider", "Failed to create DatagramSocket", e);
+            Log.e("NF/LanLinkProvider", "Failed to create DatagramSocket", e);
             return;
         }
 
         for (InetAddress ip : ipList) {
             try {
                 socket.send(new DatagramPacket(bytes, bytes.length, ip, MIN_PORT));
-                //Log.i("KDE/LanLinkProvider","Udp identity packet sent to address "+client);
+                //Log.i("NF/LanLinkProvider","Udp identity packet sent to address "+client);
             } catch (IOException e) {
-                Log.e("KDE/LanLinkProvider", "Sending udp identity packet failed. Invalid address? (" + ip.toString() + ")", e);
+                Log.e("NF/LanLinkProvider", "Sending udp identity packet failed. Invalid address? (" + ip.toString() + ")", e);
             }
         }
 
@@ -550,7 +550,7 @@ public class LanLinkProvider extends BaseLinkProvider {
 
     @Override
     public void onStart() {
-        //Log.i("KDE/LanLinkProvider", "onStart");
+        //Log.i("NF/LanLinkProvider", "onStart");
         if (!listening) {
             listening = true;
 
@@ -585,7 +585,7 @@ public class LanLinkProvider extends BaseLinkProvider {
 
     @Override
     public void onStop() {
-        //Log.i("KDE/LanLinkProvider", "onStop");
+        //Log.i("NF/LanLinkProvider", "onStop");
         listening = false;
         synchronized (mdnsDiscovery) {
             mdnsDiscovery.stopAnnouncing();

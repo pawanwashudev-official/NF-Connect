@@ -17,7 +17,7 @@ This is a native Android port of the NF Connect Qt app. You will find a more com
 
 ## How to install this app
 
-You can install this app from the [Play Store](https://play.google.com/store/apps/details?id=com.neubofy.nfconnect) as well as [F-Droid](https://f-droid.org/repository/browse/?fdid=com.neubofy.nfconnect). Note you will also need to install the [desktop app](https://invent.kde.org/network/nfconnect-kde) for it to work.
+You can install this app from the [Play Store](https://play.google.com/store/apps/details?id=com.neubofy.nfconnect) as well as [F-Droid](https://f-droid.org/repository/browse/?fdid=com.neubofy.nfconnect). Note you will also need to install the [desktop app](https://github.com/pawanwashudev-official/NF-Connect) for it to work.
 
 ## Contributing
 

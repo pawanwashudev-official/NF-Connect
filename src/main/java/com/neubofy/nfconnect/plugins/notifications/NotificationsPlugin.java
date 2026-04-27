@@ -72,7 +72,7 @@ public class NotificationsPlugin extends Plugin implements NotificationReceiver.
     private final static String PREF_KEY = "prefKey";
     protected static final int PREF_NOTIFICATION_SCREEN_OFF = R.string.screen_off_notification_state;
 
-    private final static String TAG = "KDE/NotificationsPlugin";
+    private final static String TAG = "NF/NotificationsPlugin";
 
     private AppDatabase appDatabase;
 

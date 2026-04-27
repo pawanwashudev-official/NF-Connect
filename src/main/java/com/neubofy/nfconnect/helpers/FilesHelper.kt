@@ -88,7 +88,7 @@ object FilesHelper {
     private fun getOpenFileCount(): Int? = File("/proc/self/fd").listFiles()?.size
 
     fun logOpenFileCount() {
-        Log.e("KDE/FileCount", "" + getOpenFileCount())
+        Log.e("NF/FileCount", "" + getOpenFileCount())
     }
 
     /**

@@ -188,14 +188,14 @@ class NfConnect : Application() {
         @WorkerThread
         override fun onConnectionLost(link: BaseLink) {
             val device = devices[link.deviceId]
-            Log.i("KDE/onConnectionLost", "removeLink, deviceId: ${link.deviceId}")
+            Log.i("NF/onConnectionLost", "removeLink, deviceId: ${link.deviceId}")
             if (device != null) {
                 device.removeLink(link)
                 if (!device.isReachable && !device.isPaired) {
                     scheduleForDeletion(device)
                 }
             } else {
-                Log.d("KDE/onConnectionLost", "Removing connection to unknown device")
+                Log.d("NF/onConnectionLost", "Removing connection to unknown device")
             }
             onDeviceListChanged()
         }

@@ -422,7 +422,7 @@ public class SharePlugin extends Plugin {
 
     @Override
     public void onDeviceUnpaired(Context context, String deviceId) {
-        Log.i("KDE/SharePlugin", "onDeviceUnpaired deviceId = " + deviceId);
+        Log.i("NF/SharePlugin", "onDeviceUnpaired deviceId = " + deviceId);
         if (mSharedPrefs == null) {
             mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         }

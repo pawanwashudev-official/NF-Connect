@@ -127,7 +127,7 @@ public class LanLink extends BaseLink {
     @Override
     public boolean sendPacket(@NonNull NetworkPacket np, @NonNull final Device.SendPacketStatusCallback callback, boolean sendPayloadFromSameThread) {
         if (socket == null) {
-            Log.e("KDE/sendPacket", "Not yet connected");
+            Log.e("NF/sendPacket", "Not yet connected");
             callback.onFailure(new NotYetConnectedException());
             return false;
         }
@@ -208,7 +208,7 @@ public class LanLink extends BaseLink {
                 outputStream = payloadSocket.getOutputStream();
                 inputStream = np.getPayload().getInputStream();
 
-                Log.i("KDE/LanLink", "Beginning to send payload for " + np.getType());
+                Log.i("NF/LanLink", "Beginning to send payload for " + np.getType());
                 byte[] buffer = new byte[4096];
                 int bytesRead;
                 long size = np.getPayloadSize();
@@ -227,7 +227,7 @@ public class LanLink extends BaseLink {
                     }
                 }
                 outputStream.flush();
-                Log.i("KDE/LanLink", "Finished sending payload (" + progress + " bytes written)");
+                Log.i("NF/LanLink", "Finished sending payload (" + progress + " bytes written)");
             }
         } catch(SocketTimeoutException e) {
             Log.e("LanLink", "Socket for payload in packet " + np.getType() + " timed out. The other end didn't fetch the payload.");
@@ -256,7 +256,7 @@ public class LanLink extends BaseLink {
                 np.setPayload(new NetworkPacket.Payload(payloadSocket, np.getPayloadSize()));
             } catch (Exception e) {
                 try { payloadSocket.close(); } catch(Exception ignored) { }
-                Log.e("KDE/LanLink", "Exception connecting to payload remote socket", e);
+                Log.e("NF/LanLink", "Exception connecting to payload remote socket", e);
             }
 
         }
