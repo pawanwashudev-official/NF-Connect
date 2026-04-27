@@ -17,7 +17,7 @@ This is a native Android port of the NF Connect Qt app. You will find a more com
 
 ## How to install this app
 
-You can install this app from the [Play Store](https://play.google.com/store/apps/details?id=org.kde.nfconnect_tp) as well as [F-Droid](https://f-droid.org/repository/browse/?fdid=org.kde.nfconnect_tp). Note you will also need to install the [desktop app](https://invent.kde.org/network/nfconnect-kde) for it to work.
+You can install this app from the [Play Store](https://play.google.com/store/apps/details?id=com.neubofy.nfconnect) as well as [F-Droid](https://f-droid.org/repository/browse/?fdid=com.neubofy.nfconnect). Note you will also need to install the [desktop app](https://invent.kde.org/network/nfconnect-kde) for it to work.
 
 ## Contributing
 
@@ -25,7 +25,7 @@ A lot of useful information, including how to get started working on NF Connect 
 
 For bug reporting, please use [KDE's Bugzilla](https://bugs.kde.org). Please do not use the issue tracker in GitLab since we want to keep everything in one place.
 
-To contribute patches, use [NF Connect's Gitlab](https://invent.kde.org/network/nfconnect-android/).
+To contribute patches, use [NF Connect's Gitlab](https://github.com/pawanwashudev-official/NF-Connect).
 On Gitlab (as well as on our [old Phabricator](https://phabricator.kde.org/tag/kde_connect/)) you can find a task list with stuff to do and links to other relevant resources.
 It is a good idea to also subscribe to the [NF Connect mailing list](https://mail.kde.org/mailman/listinfo/nfconnect).
 
@@ -34,4 +34,4 @@ Please know that all translations for all KDE apps are handled by the [localizat
 ## License
 [GNU GPL v2](https://www.gnu.org/licenses/gpl-2.0.html) and [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
-If you are reading this from GitHub, you should know that this is just a mirror of the [KDE Project repo](https://invent.kde.org/network/nfconnect-android/).
+If you are reading this from GitHub, you should know that this is just a mirror of the [KDE Project repo](https://github.com/pawanwashudev-official/NF-Connect).
