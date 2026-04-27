@@ -444,7 +444,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
                 setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS or MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS)
                 setCallback(mediaSessionCallback, Handler(context!!.mainLooper))
                 val sessionIntent = Intent(context!!, MprisActivity::class.java).apply {
-                    putExtra("deviceId", currentDeviceId)
+                    putExtra("deviceId", notificationDeviceId)
                 }
                 val pendingIntent = PendingIntent.getActivity(
                     context!!,
