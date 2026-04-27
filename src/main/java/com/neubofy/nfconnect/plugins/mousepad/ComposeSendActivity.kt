@@ -24,8 +24,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.preference.PreferenceManager
 import com.neubofy.nfconnect.NfConnect
-import com.neubofy.nfconnect.ui.compose.KdeTextButton
-import com.neubofy.nfconnect.ui.compose.KdeTextField
+import com.neubofy.nfconnect.ui.compose.NfTextButton
+import com.neubofy.nfconnect.ui.compose.NfTextField
 import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
@@ -83,7 +83,7 @@ class ComposeSendActivity : AppCompatActivity() {
                         navIconOnClick = { onBackPressedDispatcher.onBackPressed() },
                         navIconDescription = getString(androidx.appcompat.R.string.abc_action_bar_up_description),
                         actions = {
-                            KdeTextButton(
+                            NfTextButton(
                                 modifier = Modifier.padding(horizontal = 8.dp),
                                 onClick = { clearComposeInput() },
                                 text = stringResource(R.string.clear_compose),
@@ -93,7 +93,7 @@ class ComposeSendActivity : AppCompatActivity() {
                 },
             ) { scaffoldPadding ->
                 Box(modifier = Modifier.padding(scaffoldPadding).fillMaxSize()) {
-                    KdeTextField(
+                    NfTextField(
                         modifier = Modifier
                             .padding(horizontal = 16.dp)
                             .padding(bottom = 80.dp)
@@ -102,7 +102,7 @@ class ComposeSendActivity : AppCompatActivity() {
                         input = userInput,
                         label = stringResource(R.string.click_here_to_type),
                     )
-                    KdeTextButton(
+                    NfTextButton(
                         onClick = { sendComposed() },
                         modifier = Modifier.padding(all = 16.dp).align(Alignment.BottomEnd),
                         enabled = userInput.value.isNotEmpty(),

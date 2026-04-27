@@ -272,7 +272,7 @@ class BluetoothLinkProvider(private val context: Context) : BaseLinkProvider() {
         /**
          * Tell Android to use ServiceDiscoveryProtocol to update the
          * list of available UUIDs associated with Bluetooth devices
-         * that are bluetooth-paired-but-not-yet-kde-paired
+         * that are bluetooth-paired-but-not-yet-nf-paired
          */
         @SuppressLint("MissingPermission")
         private fun discoverDeviceServices() {

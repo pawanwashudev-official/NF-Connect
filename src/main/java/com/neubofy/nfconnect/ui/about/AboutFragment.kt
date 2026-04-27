@@ -101,7 +101,7 @@ class AboutFragment : BaseFragment<FragmentAboutBinding>() {
             startActivity(Intent(context, LicensesActivity::class.java))
         }
 
-        binding.aboutKdeButton.setOnClickListener {
+        binding.aboutNfButton.setOnClickListener {
             startActivity(Intent(context, AboutNfActivity::class.java))
         }
 

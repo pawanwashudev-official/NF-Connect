@@ -27,7 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun KdeTextButton(
+fun NfTextButton(
     onClick: () -> Unit,
     modifier: Modifier,
     text: String,
@@ -51,7 +51,7 @@ fun KdeTextButton(
 }
 
 @Composable
-fun KdeButton(
+fun NfButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     colors: ButtonColors = ButtonDefaults.buttonColors(),
@@ -84,7 +84,7 @@ fun KdeButton(
 @Preview
 @Composable
 fun IconButtonPreview() {
-    KdeButton(
+    NfButton(
         {},
         Modifier.width(120.dp),
         ButtonDefaults.buttonColors(Color.Gray, Color.DarkGray),

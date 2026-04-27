@@ -116,7 +116,7 @@ class BatteryPlugin : Plugin() {
     companion object {
         const val PACKET_TYPE_BATTERY = "NfConnect.battery"
 
-        // keep these fields in sync with NfConnect-kded:BatteryPlugin.h:ThresholdBatteryEvent
+        // keep these fields in sync with NfConnect-nfd:BatteryPlugin.h:ThresholdBatteryEvent
         private const val THRESHOLD_EVENT_NONE = 0
         private const val THRESHOLD_EVENT_BATTERY_LOW = 1
 

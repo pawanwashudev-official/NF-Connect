@@ -52,7 +52,7 @@ import androidx.compose.ui.unit.dp
 import androidx.media.VolumeProviderCompat
 import androidx.preference.PreferenceManager
 import com.neubofy.nfconnect.NfConnect
-import com.neubofy.nfconnect.ui.compose.KdeButton
+import com.neubofy.nfconnect.ui.compose.NfButton
 import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
@@ -199,7 +199,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
                             .weight(3f),
                         horizontalArrangement = Arrangement.spacedBy(20.dp),
                     ) {
-                        KdeButton(
+                        NfButton(
                             onClick = { plugin.sendPrevious() },
                             modifier = Modifier
                                 .fillMaxSize()
@@ -207,7 +207,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
                             contentDescription = getString(R.string.mpris_previous),
                             icon = Icons.Default.ArrowBack,
                         )
-                        KdeButton(
+                        NfButton(
                             onClick = { plugin.sendNext() },
                             contentDescription = getString(R.string.mpris_next),
                             modifier = Modifier
@@ -216,7 +216,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
                             icon = Icons.Default.ArrowForward,
                         )
                     }
-                    if (sensorManager != null) KdeButton(
+                    if (sensorManager != null) NfButton(
                         onClick = {},
                         colors = ButtonDefaults.filledTonalButtonColors(),
                         modifier = Modifier

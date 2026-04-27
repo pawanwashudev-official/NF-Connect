@@ -96,7 +96,7 @@ internal class MprisReceiverCallback : MediaController.Callback {
         // also useful when the input url contains only the artist name (eg: YouTube)
         return artUrl.toUri()
             .buildUpon()
-            .appendQueryParameter("kdeArtHash", artHash.toString())
+            .appendQueryParameter("nfArtHash", artHash.toString())
             .build()
             .toString()
     }
