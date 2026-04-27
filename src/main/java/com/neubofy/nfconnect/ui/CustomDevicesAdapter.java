@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.neubofy.nfconnect.DeviceHost;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.CustomDeviceItemBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.CustomDeviceItemBinding;
 
 import java.util.ArrayList;
 

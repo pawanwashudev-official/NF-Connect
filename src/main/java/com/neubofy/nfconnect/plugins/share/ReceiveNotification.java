@@ -23,8 +23,8 @@ import androidx.core.content.FileProvider;
 
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.helpers.NotificationHelper;
-import com.neubofy.nfconnect_tp.BuildConfig;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.BuildConfig;
+import com.neubofy.nfconnect.R;
 
 import java.io.File;
 import java.io.IOException;

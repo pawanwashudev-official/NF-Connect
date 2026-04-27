@@ -11,7 +11,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 public class PermissionsAlertDialogFragment extends AlertDialogFragment {
     private static final String KEY_PERMISSIONS = "Permissions";

@@ -13,8 +13,8 @@ import android.view.View
 import androidx.appcompat.widget.TooltipCompat
 import androidx.core.net.toUri
 import com.neubofy.nfconnect.ui.list.ListAdapter
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.AboutPersonListItemEntryBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.AboutPersonListItemEntryBinding
 
 class AboutPersonEntryItem(val person: AboutPerson) : ListAdapter.Item {
     override fun inflateView(layoutInflater: LayoutInflater): View {

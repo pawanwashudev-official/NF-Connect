@@ -48,8 +48,8 @@ import com.neubofy.nfconnect.plugins.sms.SmsMmsUtils.partIdToMessageAttachmentPa
 import com.neubofy.nfconnect.plugins.sms.SmsMmsUtils.sendMessage
 import com.neubofy.nfconnect.plugins.telephony.TelephonyPlugin
 import com.neubofy.nfconnect.ui.PluginSettingsFragment
-import com.neubofy.nfconnect_tp.BuildConfig
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.BuildConfig
+import com.neubofy.nfconnect.R
 import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
 

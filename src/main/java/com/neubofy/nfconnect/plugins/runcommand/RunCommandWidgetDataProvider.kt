@@ -16,7 +16,7 @@ import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import android.widget.RemoteViewsService.RemoteViewsFactory
 import com.neubofy.nfconnect.NfConnect
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 internal class RunCommandWidgetDataProvider(private val context: Context, val intent: Intent?) : RemoteViewsFactory {
 

@@ -49,7 +49,7 @@ import com.neubofy.nfconnect.plugins.PluginFactory;
 import com.neubofy.nfconnect.ui.MainActivity;
 import com.neubofy.nfconnect.ui.PluginSettingsFragment;
 import com.neubofy.nfconnect.ui.StartActivityAlertDialogFragment;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
@@ -219,7 +219,7 @@ public class NotificationsPlugin extends Plugin implements NotificationReceiver.
             }
         }
 
-        if ("com.neubofy.nfconnect_tp".equals(packageName) || "com.neubofy.nfconnect_tp.debug".equals(packageName)) {
+        if ("com.neubofy.nfconnect".equals(packageName) || "com.neubofy.nfconnect.debug".equals(packageName)) {
             // Don't send our own notifications
             return;
         }

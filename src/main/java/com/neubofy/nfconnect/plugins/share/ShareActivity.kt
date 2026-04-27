@@ -25,8 +25,8 @@ import com.neubofy.nfconnect.ui.list.DeviceItem
 import com.neubofy.nfconnect.ui.list.ListAdapter
 import com.neubofy.nfconnect.ui.list.SectionItem
 import com.neubofy.nfconnect.ui.list.UnreachableDeviceItem
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityShareBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityShareBinding
 
 class ShareActivity : BaseActivity<ActivityShareBinding>() {
 

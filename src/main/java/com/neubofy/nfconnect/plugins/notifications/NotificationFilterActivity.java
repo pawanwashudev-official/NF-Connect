@@ -45,8 +45,8 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 
 import com.neubofy.nfconnect.helpers.ThreadHelper;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.ActivityNotificationFilterBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.ActivityNotificationFilterBinding;
 
 import java.util.ArrayList;
 import java.util.HashSet;

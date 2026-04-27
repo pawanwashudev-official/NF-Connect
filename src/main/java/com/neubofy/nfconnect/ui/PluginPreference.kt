@@ -13,7 +13,7 @@ import androidx.preference.SwitchPreference
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory.getPluginInfo
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 class PluginPreference : SwitchPreference {
     private val device: Device

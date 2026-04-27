@@ -43,8 +43,8 @@ import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.share.ShareSettingsFragment
 import com.neubofy.nfconnect.ui.about.AboutFragment
 import com.neubofy.nfconnect.ui.about.getApplicationAboutData
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityMainBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityMainBinding
 
 private const val MENU_ENTRY_ADD_DEVICE = 1 //0 means no-selection
 private const val MENU_ENTRY_SETTINGS = 2

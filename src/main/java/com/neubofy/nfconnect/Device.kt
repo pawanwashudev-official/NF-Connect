@@ -40,7 +40,7 @@ import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.Plugin.Companion.getPluginKey
 import com.neubofy.nfconnect.plugins.PluginFactory
 import com.neubofy.nfconnect.ui.MainActivity
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import java.io.IOException
 import java.security.cert.Certificate
 import java.util.Vector

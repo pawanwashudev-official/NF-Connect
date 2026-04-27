@@ -16,7 +16,7 @@ import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory.LoadablePlugin
 import com.neubofy.nfconnect.ui.PluginSettingsFragment
 import com.neubofy.nfconnect.ui.PluginSettingsFragment.Companion.newInstance
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 @LoadablePlugin
 class MousePadPlugin : Plugin() {

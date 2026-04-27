@@ -15,7 +15,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.core.content.ContextCompat
 import com.neubofy.nfconnect.helpers.ThreadHelper.execute
-import com.neubofy.nfconnect_tp.BuildConfig
+import com.neubofy.nfconnect.BuildConfig
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.text.SimpleDateFormat

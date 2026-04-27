@@ -8,7 +8,7 @@ package com.neubofy.nfconnect.ui.list
 import android.view.LayoutInflater
 import android.view.View
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect_tp.databinding.ListItemDeviceEntryBinding
+import com.neubofy.nfconnect.databinding.ListItemDeviceEntryBinding
 
 open class DeviceItem(
     val device: Device,

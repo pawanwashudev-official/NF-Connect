@@ -29,8 +29,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.neubofy.nfconnect.DeviceHost;
 import com.neubofy.nfconnect.helpers.WindowHelper;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.ActivityCustomDevicesBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.ActivityCustomDevicesBinding;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -35,13 +35,13 @@ import com.neubofy.nfconnect.ui.list.PairingDeviceItem
 import com.neubofy.nfconnect.ui.list.SectionItem
 import com.neubofy.nfconnect.base.BaseFragment
 import com.neubofy.nfconnect.extensions.setupBottomPadding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.DevicesListBinding
-import com.neubofy.nfconnect_tp.databinding.PairingExplanationDuplicateNamesBinding
-import com.neubofy.nfconnect_tp.databinding.PairingExplanationNotTrustedBinding
-import com.neubofy.nfconnect_tp.databinding.PairingExplanationTextBinding
-import com.neubofy.nfconnect_tp.databinding.PairingExplanationTextNoNotificationsBinding
-import com.neubofy.nfconnect_tp.databinding.PairingExplanationTextNoWifiBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.DevicesListBinding
+import com.neubofy.nfconnect.databinding.PairingExplanationDuplicateNamesBinding
+import com.neubofy.nfconnect.databinding.PairingExplanationNotTrustedBinding
+import com.neubofy.nfconnect.databinding.PairingExplanationTextBinding
+import com.neubofy.nfconnect.databinding.PairingExplanationTextNoNotificationsBinding
+import com.neubofy.nfconnect.databinding.PairingExplanationTextNoWifiBinding
 
 /**
  * The view that the user will see when there are no devices paired, or when you choose "add a new device" from the sidebar.

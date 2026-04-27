@@ -9,7 +9,7 @@ package com.neubofy.nfconnect.ui.about
 import android.content.Context
 import android.util.AttributeSet
 import androidx.gridlayout.widget.GridLayout
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import kotlin.math.max
 
 /**

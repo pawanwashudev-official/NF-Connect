@@ -18,7 +18,7 @@ import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.list.DeviceItem
 import com.neubofy.nfconnect.ui.list.ListAdapter
-import com.neubofy.nfconnect_tp.databinding.WidgetRemoteCommandPluginDialogBinding
+import com.neubofy.nfconnect.databinding.WidgetRemoteCommandPluginDialogBinding
 
 class RunCommandWidgetConfigActivity : AppCompatActivity() {
 
@@ -61,7 +61,7 @@ class RunCommandWidgetConfigActivity : AppCompatActivity() {
     }
 }
 
-private const val PREFS_NAME = "com.neubofy.nfconnect_tp.WidgetProvider"
+private const val PREFS_NAME = "com.neubofy.nfconnect.WidgetProvider"
 private const val PREF_PREFIX_KEY = "appwidget_"
 
 internal fun saveWidgetDeviceIdPref(context: Context, appWidgetId: Int, deviceName: String) {

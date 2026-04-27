@@ -15,7 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.bouncycastle.util.Arrays
 import com.neubofy.nfconnect.helpers.security.SslHelper
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import java.security.MessageDigest
 import java.security.cert.Certificate
 import java.util.Formatter

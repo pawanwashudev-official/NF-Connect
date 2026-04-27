@@ -10,7 +10,7 @@ import android.os.Build
 import android.preference.PreferenceManager
 import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationManagerCompat
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import androidx.core.content.edit
 
 object NotificationHelper {

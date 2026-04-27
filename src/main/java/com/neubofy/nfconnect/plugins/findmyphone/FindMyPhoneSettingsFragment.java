@@ -26,7 +26,7 @@ import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
 import com.neubofy.nfconnect.ui.PluginSettingsFragment;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 public class FindMyPhoneSettingsFragment extends PluginSettingsFragment {
     private static final int REQUEST_CODE_SELECT_RINGTONE = 1000;

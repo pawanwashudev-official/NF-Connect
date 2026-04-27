@@ -27,8 +27,8 @@ import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.ui.list.ListAdapter;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.ActivityRunCommandBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.ActivityRunCommandBinding;
 
 import java.util.ArrayList;
 import java.util.Collections;

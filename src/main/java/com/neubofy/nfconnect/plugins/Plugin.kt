@@ -21,7 +21,7 @@ import com.neubofy.nfconnect.ui.AlertDialogFragment
 import com.neubofy.nfconnect.ui.MainActivity
 import com.neubofy.nfconnect.ui.PermissionsAlertDialogFragment
 import com.neubofy.nfconnect.ui.PluginSettingsFragment
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 abstract class Plugin {
     protected lateinit var device: Device

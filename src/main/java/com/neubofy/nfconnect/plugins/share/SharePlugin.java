@@ -44,7 +44,7 @@ import com.neubofy.nfconnect.ui.MainActivity;
 import com.neubofy.nfconnect.ui.PluginSettingsFragment;
 import com.neubofy.nfconnect.async.BackgroundJob;
 import com.neubofy.nfconnect.async.BackgroundJobHandler;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;

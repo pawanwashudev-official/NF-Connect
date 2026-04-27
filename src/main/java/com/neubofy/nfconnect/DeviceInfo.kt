@@ -12,7 +12,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import com.neubofy.nfconnect.helpers.DeviceHelper
 import com.neubofy.nfconnect.helpers.TrustedDevices
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import java.security.cert.Certificate
 import java.security.cert.CertificateEncodingException
 import java.security.cert.CertificateException

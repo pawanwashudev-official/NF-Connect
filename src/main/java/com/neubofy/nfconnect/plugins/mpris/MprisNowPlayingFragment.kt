@@ -34,9 +34,9 @@ import com.neubofy.nfconnect.helpers.VideoUrlsHelper
 import com.neubofy.nfconnect.helpers.calculateNewVolume
 import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.mpris.MprisPlugin.MprisPlayer
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.MprisControlBinding
-import com.neubofy.nfconnect_tp.databinding.MprisNowPlayingBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.MprisControlBinding
+import com.neubofy.nfconnect.databinding.MprisNowPlayingBinding
 import java.net.MalformedURLException
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds

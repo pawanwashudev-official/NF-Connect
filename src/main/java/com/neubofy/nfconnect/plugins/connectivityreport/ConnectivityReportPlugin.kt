@@ -13,7 +13,7 @@ import com.neubofy.nfconnect.plugins.connectivityreport.ConnectivityListener.Com
 import com.neubofy.nfconnect.plugins.connectivityreport.ConnectivityListener.SubscriptionState
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory.LoadablePlugin
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 @LoadablePlugin
 class ConnectivityReportPlugin : Plugin() {

@@ -14,8 +14,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.neubofy.nfconnect.plugins.systemvolume.SystemVolumeFragment
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.viewBinding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityMprisBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityMprisBinding
 
 class MprisActivity : BaseActivity<ActivityMprisBinding>() {
 

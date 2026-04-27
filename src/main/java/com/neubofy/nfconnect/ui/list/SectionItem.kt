@@ -7,7 +7,7 @@ package com.neubofy.nfconnect.ui.list
 
 import android.view.LayoutInflater
 import android.view.View
-import com.neubofy.nfconnect_tp.databinding.ListItemCategoryBinding
+import com.neubofy.nfconnect.databinding.ListItemCategoryBinding
 
 class SectionItem : ListAdapter.Item {
     private val title: String

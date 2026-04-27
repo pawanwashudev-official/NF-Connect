@@ -44,7 +44,7 @@ import com.neubofy.nfconnect.helpers.SMSHelper
 import com.neubofy.nfconnect.helpers.TelephonyHelper
 import com.neubofy.nfconnect.helpers.TelephonyHelper.LocalPhoneNumber
 import com.neubofy.nfconnect.NetworkPacket
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.File

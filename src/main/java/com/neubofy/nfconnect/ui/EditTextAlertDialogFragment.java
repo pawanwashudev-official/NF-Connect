@@ -15,8 +15,8 @@ import androidx.annotation.StringRes;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.EditTextAlertDialogViewBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.EditTextAlertDialogViewBinding;
 
 public class EditTextAlertDialogFragment extends AlertDialogFragment {
     private static final String KEY_HINT_RES_ID = "HintResId";

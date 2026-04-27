@@ -7,7 +7,7 @@ package com.neubofy.nfconnect.ui.list
 
 import android.view.LayoutInflater
 import android.view.View
-import com.neubofy.nfconnect_tp.databinding.ListItemEntryBinding
+import com.neubofy.nfconnect.databinding.ListItemEntryBinding
 
 open class EntryItem protected constructor(protected val title: String, protected val subtitle: String?) : ListAdapter.Item {
 

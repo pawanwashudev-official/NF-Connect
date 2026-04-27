@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.NetworkPacket;
 import com.neubofy.nfconnect.async.BackgroundJob;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.util.ArrayList;
 import java.util.List;

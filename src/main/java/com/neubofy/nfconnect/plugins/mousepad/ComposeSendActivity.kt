@@ -29,7 +29,7 @@ import com.neubofy.nfconnect.ui.compose.KdeTextField
 import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import androidx.core.content.edit
 
 private const val INPUT_CACHE_KEY = "compose_send_input_cache"

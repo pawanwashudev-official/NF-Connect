@@ -13,8 +13,8 @@ import android.text.method.LinkMovementMethod
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.setupBottomPadding
 import com.neubofy.nfconnect.extensions.viewBinding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityAboutNfBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityAboutNfBinding
 
 class AboutNfActivity : BaseActivity<ActivityAboutNfBinding>() {
 

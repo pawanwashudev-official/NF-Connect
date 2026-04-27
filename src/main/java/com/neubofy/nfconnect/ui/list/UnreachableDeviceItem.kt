@@ -8,7 +8,7 @@ package com.neubofy.nfconnect.ui.list
 import android.view.LayoutInflater
 import android.view.View
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 class UnreachableDeviceItem(
     device: Device,

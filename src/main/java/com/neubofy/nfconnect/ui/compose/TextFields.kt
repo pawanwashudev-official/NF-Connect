@@ -18,7 +18,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 @Composable
 fun KdeTextField(modifier: Modifier = Modifier, input: MutableState<String>, label: String) {

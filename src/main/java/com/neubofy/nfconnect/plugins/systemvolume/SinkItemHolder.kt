@@ -4,8 +4,8 @@ import android.view.View
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.neubofy.nfconnect_tp.R.drawable
-import com.neubofy.nfconnect_tp.databinding.ListItemSystemvolumeBinding
+import com.neubofy.nfconnect.R.drawable
+import com.neubofy.nfconnect.databinding.ListItemSystemvolumeBinding
 
 class SinkItemHolder(
     val viewBinding: ListItemSystemvolumeBinding,

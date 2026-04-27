@@ -7,8 +7,8 @@
 package com.neubofy.nfconnect.ui.about
 
 import android.content.Context
-import com.neubofy.nfconnect_tp.BuildConfig
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.BuildConfig
+import com.neubofy.nfconnect.R
 
 /**
 * Add authors and credits here

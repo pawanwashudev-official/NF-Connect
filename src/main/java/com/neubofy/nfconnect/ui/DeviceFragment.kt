@@ -59,8 +59,8 @@ import com.neubofy.nfconnect.plugins.runcommand.RunCommandPlugin
 import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.base.BaseFragment
 import com.neubofy.nfconnect.extensions.setupBottomPadding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityDeviceBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityDeviceBinding
 
 /**
  * Main view. Displays the current device and its plugins

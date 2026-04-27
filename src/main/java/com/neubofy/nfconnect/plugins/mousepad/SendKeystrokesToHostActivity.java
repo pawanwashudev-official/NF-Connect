@@ -23,8 +23,8 @@ import com.neubofy.nfconnect.ui.list.DeviceItem;
 import com.neubofy.nfconnect.ui.list.ListAdapter;
 import com.neubofy.nfconnect.ui.list.SectionItem;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.ActivitySendkeystrokesBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.ActivitySendkeystrokesBinding;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -23,7 +23,7 @@ import androidx.core.content.ContextCompat;
 
 import com.neubofy.nfconnect.ui.MainActivity;
 import com.neubofy.nfconnect.ui.PluginSettingsActivity;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.util.ArrayList;
 import java.util.List;

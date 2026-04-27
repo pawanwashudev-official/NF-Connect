@@ -25,7 +25,7 @@ import com.neubofy.nfconnect.helpers.FilesHelper;
 import com.neubofy.nfconnect.helpers.MediaStoreHelper;
 import com.neubofy.nfconnect.NetworkPacket;
 import com.neubofy.nfconnect.async.BackgroundJob;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -349,7 +349,7 @@ public class CompositeReceiveFileJob extends BackgroundJob<Device, Void> {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             //Nougat and later require "content://" uris instead of "file://" uris
             File file = new File(fileDocument.getUri().getPath());
-            Uri contentUri = FileProvider.getUriForFile(getDevice().getContext(), "com.neubofy.nfconnect_tp.fileprovider", file);
+            Uri contentUri = FileProvider.getUriForFile(getDevice().getContext(), "com.neubofy.nfconnect.fileprovider", file);
             intent.setDataAndType(contentUri, mimeType);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
         } else {

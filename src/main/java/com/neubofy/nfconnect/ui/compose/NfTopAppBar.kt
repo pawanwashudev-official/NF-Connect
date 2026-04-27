@@ -17,7 +17,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

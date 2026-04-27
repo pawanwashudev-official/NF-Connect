@@ -28,7 +28,7 @@ import org.json.JSONObject
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.MainActivity
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import org.reactivestreams.FlowAdapters
 import java.util.concurrent.Flow
 import java.util.function.Consumer

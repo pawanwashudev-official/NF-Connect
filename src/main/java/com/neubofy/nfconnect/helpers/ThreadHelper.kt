@@ -8,7 +8,7 @@ package com.neubofy.nfconnect.helpers
 
 import android.os.Looper
 import android.util.Log
-import com.neubofy.nfconnect_tp.BuildConfig
+import com.neubofy.nfconnect.BuildConfig
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

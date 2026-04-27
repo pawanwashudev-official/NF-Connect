@@ -56,7 +56,7 @@ import com.neubofy.nfconnect.ui.compose.KdeButton
 import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 private const val VOLUME_UP = 1
 private const val VOLUME_DOWN = -1

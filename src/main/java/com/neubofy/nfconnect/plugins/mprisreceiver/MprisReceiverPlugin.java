@@ -28,7 +28,7 @@ import com.neubofy.nfconnect.plugins.Plugin;
 import com.neubofy.nfconnect.plugins.PluginFactory;
 import com.neubofy.nfconnect.ui.MainActivity;
 import com.neubofy.nfconnect.ui.StartActivityAlertDialogFragment;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

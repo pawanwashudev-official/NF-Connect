@@ -17,8 +17,8 @@ import androidx.appcompat.app.AlertDialog
 import com.neubofy.nfconnect.helpers.TrustedNetworkHelper
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.viewBinding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.TrustedNetworkListBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.TrustedNetworkListBinding
 
 class TrustedNetworksActivity : BaseActivity<TrustedNetworkListBinding>() {
     override val binding: TrustedNetworkListBinding by viewBinding(TrustedNetworkListBinding::inflate)

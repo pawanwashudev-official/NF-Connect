@@ -27,8 +27,8 @@ import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.PluginSettingsActivity
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.viewBinding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityDigitizerBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityDigitizerBinding
 import kotlin.math.roundToInt
 
 class DigitizerActivity : BaseActivity<ActivityDigitizerBinding>(), DrawingPadView.EventListener {

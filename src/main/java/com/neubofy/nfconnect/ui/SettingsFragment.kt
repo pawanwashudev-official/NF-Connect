@@ -43,8 +43,8 @@ import com.neubofy.nfconnect.helpers.DeviceHelper.getDeviceName
 import com.neubofy.nfconnect.helpers.NotificationHelper
 import com.neubofy.nfconnect.ui.ThemeUtil.applyTheme
 import com.neubofy.nfconnect.extensions.setupBottomPadding
-import com.neubofy.nfconnect_tp.BuildConfig
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.BuildConfig
+import com.neubofy.nfconnect.R
 import java.io.InputStreamReader
 
 class SettingsFragment : PreferenceFragmentCompat() {

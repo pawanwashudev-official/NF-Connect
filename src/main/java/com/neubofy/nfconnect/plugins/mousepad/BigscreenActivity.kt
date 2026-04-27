@@ -20,8 +20,8 @@ import com.neubofy.nfconnect.ui.MainActivity
 import com.neubofy.nfconnect.ui.PermissionsAlertDialogFragment
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.viewBinding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityBigscreenBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityBigscreenBinding
 
 class BigscreenActivity : BaseActivity<ActivityBigscreenBinding>() {
 

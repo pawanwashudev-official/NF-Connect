@@ -11,7 +11,7 @@ import org.json.JSONException
 import com.neubofy.nfconnect.NetworkPacket
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory.LoadablePlugin
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 import java.util.concurrent.ConcurrentHashMap
 
 @LoadablePlugin

@@ -26,7 +26,7 @@ import android.widget.ImageView;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 import com.neubofy.nfconnect.plugins.inputdevicesreceiver.InputDevicesReceiverPlugin.Cursor;
 
 import java.util.ArrayDeque;

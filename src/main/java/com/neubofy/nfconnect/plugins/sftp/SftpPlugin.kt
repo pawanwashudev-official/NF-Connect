@@ -26,8 +26,8 @@ import com.neubofy.nfconnect.ui.DeviceSettingsAlertDialogFragment
 import com.neubofy.nfconnect.ui.MainActivity
 import com.neubofy.nfconnect.ui.PluginSettingsFragment
 import com.neubofy.nfconnect.ui.StartActivityAlertDialogFragment
-import com.neubofy.nfconnect_tp.BuildConfig
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.BuildConfig
+import com.neubofy.nfconnect.R
 
 @LoadablePlugin
 class SftpPlugin : Plugin(), OnSharedPreferenceChangeListener {

@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 
 import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.databinding.ActivityFindMyPhoneBinding;
+import com.neubofy.nfconnect.databinding.ActivityFindMyPhoneBinding;
 
 import java.util.Objects;
 

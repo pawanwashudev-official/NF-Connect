@@ -18,8 +18,8 @@ import android.widget.RemoteViews
 import androidx.core.net.toUri
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.NfConnect
-import com.neubofy.nfconnect_tp.BuildConfig
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.BuildConfig
+import com.neubofy.nfconnect.R
 
 const val RUN_COMMAND_ACTION = "RUN_COMMAND_ACTION"
 const val TARGET_COMMAND = "TARGET_COMMAND"

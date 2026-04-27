@@ -31,8 +31,8 @@ import org.json.JSONException
 import org.json.JSONObject
 import com.neubofy.nfconnect.helpers.StorageHelper
 import com.neubofy.nfconnect.plugins.sftp.SftpPlugin.StorageInfo.Companion.fromJSON
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.FragmentStoragePreferenceDialogBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.FragmentStoragePreferenceDialogBinding
 
 class StoragePreferenceDialogFragment : PreferenceDialogFragmentCompat(), TextWatcher {
     private var binding: FragmentStoragePreferenceDialogBinding? = null

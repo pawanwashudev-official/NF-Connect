@@ -34,7 +34,7 @@ import com.neubofy.nfconnect.NetworkPacket;
 import com.neubofy.nfconnect.plugins.Plugin;
 import com.neubofy.nfconnect.plugins.PluginFactory;
 import com.neubofy.nfconnect.ui.PluginSettingsFragment;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.io.IOException;
 

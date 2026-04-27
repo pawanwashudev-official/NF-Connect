@@ -19,9 +19,9 @@ import com.neubofy.nfconnect.plugins.mpris.VolumeKeyListener
 import com.neubofy.nfconnect.plugins.systemvolume.SystemVolumePlugin.SinkListener
 import com.neubofy.nfconnect.base.BaseFragment
 import com.neubofy.nfconnect.extensions.setupBottomPadding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ListItemSystemvolumeBinding
-import com.neubofy.nfconnect_tp.databinding.SystemVolumeFragmentBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ListItemSystemvolumeBinding
+import com.neubofy.nfconnect.databinding.SystemVolumeFragmentBinding
 
 class SystemVolumeFragment : BaseFragment<SystemVolumeFragmentBinding>(),
     Sink.UpdateListener, SinkListener, VolumeKeyListener {

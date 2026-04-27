@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.neubofy.nfconnect.helpers.ThreadHelper;
 import com.neubofy.nfconnect.NfConnect;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 import java.util.ArrayList;
 

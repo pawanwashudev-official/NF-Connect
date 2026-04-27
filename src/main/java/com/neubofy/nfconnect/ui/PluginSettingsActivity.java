@@ -25,8 +25,8 @@ import com.neubofy.nfconnect.DeviceStats;
 import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.plugins.Plugin;
 import com.neubofy.nfconnect.base.BaseActivity;
-import com.neubofy.nfconnect_tp.R;
-import com.neubofy.nfconnect_tp.databinding.ActivityPluginSettingsBinding;
+import com.neubofy.nfconnect.R;
+import com.neubofy.nfconnect.databinding.ActivityPluginSettingsBinding;
 
 import java.util.Objects;
 

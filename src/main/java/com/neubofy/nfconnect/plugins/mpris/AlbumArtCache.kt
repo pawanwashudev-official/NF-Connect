@@ -22,7 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import com.neubofy.nfconnect.NetworkPacket.Payload
-import com.neubofy.nfconnect_tp.BuildConfig
+import com.neubofy.nfconnect.BuildConfig
 import java.io.File
 import java.io.IOException
 import java.io.InputStream

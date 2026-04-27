@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.NfConnect;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 public class RunCommandUrlActivity extends AppCompatActivity {
 

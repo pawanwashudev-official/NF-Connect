@@ -20,8 +20,8 @@ import com.neubofy.nfconnect.ui.list.ListAdapter
 import com.neubofy.nfconnect.base.BaseFragment
 import com.neubofy.nfconnect.extensions.getParcelableCompat
 import com.neubofy.nfconnect.extensions.setupBottomPadding
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.FragmentAboutBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.FragmentAboutBinding
 
 class AboutFragment : BaseFragment<FragmentAboutBinding>() {
 

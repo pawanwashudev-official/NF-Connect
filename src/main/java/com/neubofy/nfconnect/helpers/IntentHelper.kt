@@ -12,7 +12,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.neubofy.nfconnect.helpers.LifecycleHelper.isInForeground
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 object IntentHelper {
     /**

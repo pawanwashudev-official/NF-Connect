@@ -18,7 +18,7 @@ import androidx.preference.PreferenceManager;
 
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.helpers.NotificationHelper;
-import com.neubofy.nfconnect_tp.R;
+import com.neubofy.nfconnect.R;
 
 class UploadNotification {
     private final NotificationManager notificationManager;

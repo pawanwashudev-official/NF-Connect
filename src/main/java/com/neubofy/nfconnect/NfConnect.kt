@@ -25,7 +25,7 @@ import com.neubofy.nfconnect.PairingHandler.PairingCallback
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory
 import com.neubofy.nfconnect.ui.ThemeUtil
-import com.neubofy.nfconnect_tp.BuildConfig
+import com.neubofy.nfconnect.BuildConfig
 import org.slf4j.impl.HandroidLoggerAdapter
 import java.security.cert.CertificateException
 import java.security.cert.X509Certificate

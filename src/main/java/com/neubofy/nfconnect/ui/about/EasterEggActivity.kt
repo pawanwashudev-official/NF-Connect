@@ -17,8 +17,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityEasterEggBinding
+import com.neubofy.nfconnect.R
+import com.neubofy.nfconnect.databinding.ActivityEasterEggBinding
 import kotlin.math.PI
 import kotlin.math.atan2
 

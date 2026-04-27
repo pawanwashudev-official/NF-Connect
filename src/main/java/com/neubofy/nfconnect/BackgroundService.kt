@@ -39,7 +39,7 @@ import com.neubofy.nfconnect.plugins.runcommand.RunCommandActivity
 import com.neubofy.nfconnect.plugins.runcommand.RunCommandPlugin
 import com.neubofy.nfconnect.plugins.share.SendFileActivity
 import com.neubofy.nfconnect.ui.MainActivity
-import com.neubofy.nfconnect_tp.R
+import com.neubofy.nfconnect.R
 
 /**
  * This class (still) does 3 things:
