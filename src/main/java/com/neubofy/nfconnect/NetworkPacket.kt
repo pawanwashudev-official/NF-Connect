@@ -282,8 +282,8 @@ class NetworkPacket private constructor(
     }
 
     companion object {
-        const val PACKET_TYPE_IDENTITY: String = "kdeconnect.identity"
-        const val PACKET_TYPE_PAIR: String = "kdeconnect.pair"
+        const val PACKET_TYPE_IDENTITY: String = "NfConnect.identity"
+        const val PACKET_TYPE_PAIR: String = "NfConnect.pair"
 
         val PROTOCOL_PACKET_TYPES: List<String> = listOf(
             PACKET_TYPE_IDENTITY,

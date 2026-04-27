@@ -27,7 +27,7 @@ import androidx.core.app.TaskStackBuilder
 import androidx.core.content.ContextCompat
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.helpers.NotificationHelper
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.mpris.MprisPlugin.MprisPlayer
 import com.neubofy.nfconnect.plugins.notifications.NotificationReceiver
 import com.neubofy.nfconnect.plugins.systemvolume.SystemVolumePlugin
@@ -159,7 +159,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
 
     private fun findPlayer(): Pair<Device, MprisPlayer>? {
         val currentDevice = if (notificationDeviceId != null && mprisDevices.contains(notificationDeviceId)) {
-            KdeConnect.getInstance().getDevice(notificationDeviceId)
+            NfConnect.getInstance().getDevice(notificationDeviceId)
         } else {
             null
         }
@@ -174,7 +174,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
         }
 
         // Try a different player from another device
-        for (otherDevice in KdeConnect.getInstance().devices.values) {
+        for (otherDevice in NfConnect.getInstance().devices.values) {
             val player = getPlayerFromDevice(otherDevice, null)
             if (player != null) {
                 return Pair(otherDevice, player)
@@ -210,7 +210,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
     }
 
     private fun updateRemoteDeviceVolumeControl() {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(notificationDeviceId, SystemVolumePlugin::class.java)
+        val plugin = NfConnect.getInstance().getDevicePlugin(notificationDeviceId, SystemVolumePlugin::class.java)
             ?: return
         val systemVolumeProvider = SystemVolumeProvider.getInstance()
         systemVolumeProvider.setPlugin(plugin)
@@ -240,7 +240,7 @@ class MprisMediaSession : OnSharedPreferenceChangeListener, NotificationReceiver
         // Make sure our information is up-to-date
         val currentPlayer = updateCurrentPlayer()
 
-        val device = KdeConnect.getInstance().getDevice(notificationDeviceId)
+        val device = NfConnect.getInstance().getDevice(notificationDeviceId)
         if (device == null) {
             closeMediaNotification()
             return

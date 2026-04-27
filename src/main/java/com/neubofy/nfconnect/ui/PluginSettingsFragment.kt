@@ -9,7 +9,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect.KdeConnect.Companion.getInstance
+import com.neubofy.nfconnect.NfConnect.Companion.getInstance
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.PluginFactory
 import com.neubofy.nfconnect_tp.R

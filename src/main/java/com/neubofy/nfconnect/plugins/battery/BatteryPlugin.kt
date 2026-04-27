@@ -114,9 +114,9 @@ class BatteryPlugin : Plugin() {
     override val outgoingPacketTypes: Array<String> = arrayOf(PACKET_TYPE_BATTERY)
 
     companion object {
-        const val PACKET_TYPE_BATTERY = "kdeconnect.battery"
+        const val PACKET_TYPE_BATTERY = "NfConnect.battery"
 
-        // keep these fields in sync with kdeconnect-kded:BatteryPlugin.h:ThresholdBatteryEvent
+        // keep these fields in sync with NfConnect-kded:BatteryPlugin.h:ThresholdBatteryEvent
         private const val THRESHOLD_EVENT_NONE = 0
         private const val THRESHOLD_EVENT_BATTERY_LOW = 1
 

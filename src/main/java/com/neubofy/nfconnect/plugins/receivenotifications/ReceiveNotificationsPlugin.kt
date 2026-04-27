@@ -83,14 +83,14 @@ class ReceiveNotificationsPlugin : Plugin() {
                 .setSmallIcon(R.drawable.ic_notification)
                 .setLargeIcon(largeIcon)
                 .setAutoCancel(true)
-                .setLocalOnly(true) // to avoid bouncing the notification back to other kdeconnect nodes
+                .setLocalOnly(true) // to avoid bouncing the notification back to other NfConnect nodes
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setStyle(NotificationCompat.BigTextStyle().bigText(np.getString("ticker")))
                 .build()
 
         val id = np.getString("id")
         val intId = try { id.toInt() } catch (e: NumberFormatException) { 0 }
-        notificationManager.notify("kdeconnectId:${id}", intId, noti)
+        notificationManager.notify("NfConnectId:${id}", intId, noti)
 
         return true
     }
@@ -108,7 +108,7 @@ class ReceiveNotificationsPlugin : Plugin() {
     override val permissionExplanation: Int = R.string.receive_notifications_permission_explanation
 
     companion object {
-        private const val PACKET_TYPE_NOTIFICATION = "kdeconnect.notification"
-        private const val PACKET_TYPE_NOTIFICATION_REQUEST = "kdeconnect.notification.request"
+        private const val PACKET_TYPE_NOTIFICATION = "NfConnect.notification"
+        private const val PACKET_TYPE_NOTIFICATION_REQUEST = "NfConnect.notification.request"
     }
 }

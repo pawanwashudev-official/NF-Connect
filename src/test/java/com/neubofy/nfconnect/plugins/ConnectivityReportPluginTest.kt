@@ -69,7 +69,7 @@ class ConnectivityReportPluginTest {
 
         val sent = checkNotNull(packet)
 
-        assertEquals("kdeconnect.connectivity_report", sent.type)
+        assertEquals("NfConnect.connectivity_report", sent.type)
 
         val signalStrengths = sent.getJSONObject("signalStrengths")!!
         val subInfo = signalStrengths.getJSONObject("6")
@@ -107,7 +107,7 @@ class ConnectivityReportPluginTest {
 
     @Test
     fun testIgnoresReceivedPackets() {
-        assertFalse(plugin.onPacketReceived(NetworkPacket("kdeconnect.connectivity_report")))
+        assertFalse(plugin.onPacketReceived(NetworkPacket("NfConnect.connectivity_report")))
         assertFalse(plugin.onPacketReceived(NetworkPacket("some.other.type")))
 
         verify(exactly = 0) { device.onPluginsChanged() }

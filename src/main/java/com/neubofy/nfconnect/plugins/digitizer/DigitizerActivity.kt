@@ -23,7 +23,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.preference.PreferenceManager
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.PluginSettingsActivity
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.viewBinding
@@ -42,7 +42,7 @@ class DigitizerActivity : BaseActivity<ActivityDigitizerBinding>(), DrawingPadVi
 
     private val plugin: DigitizerPlugin?
         get() {
-            val plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, DigitizerPlugin::class.java)
+            val plugin = NfConnect.getInstance().getDevicePlugin(deviceId, DigitizerPlugin::class.java)
 
             if (plugin == null)
                 finish()

@@ -26,7 +26,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.MainActivity
 import com.neubofy.nfconnect_tp.R
 import org.reactivestreams.FlowAdapters
@@ -84,7 +84,7 @@ class RunCommandControlsProviderService : ControlsProviderService() {
             val commandEntry = getCommandByControlId(controlId)
             if (commandEntry != null) {
                 val deviceId = controlId.split(":")[0]
-                val plugin = KdeConnect.getInstance().getDevicePlugin(deviceId ,RunCommandPlugin::class.java)
+                val plugin = NfConnect.getInstance().getDevicePlugin(deviceId ,RunCommandPlugin::class.java)
                 if (plugin != null) {
                     plugin.runCommand(commandEntry.key)
                     consumer.accept(ControlAction.RESPONSE_OK)
@@ -125,7 +125,7 @@ class RunCommandControlsProviderService : ControlsProviderService() {
     private fun getAllCommandsList(): List<CommandEntryWithDevice> {
         val commandList = mutableListOf<CommandEntryWithDevice>()
 
-        for (device in KdeConnect.getInstance().devices.values) {
+        for (device in NfConnect.getInstance().devices.values) {
             if (!device.isReachable) {
                 commandList.addAll(getSavedCommandsList(device))
                 continue
@@ -151,7 +151,7 @@ class RunCommandControlsProviderService : ControlsProviderService() {
     private fun getCommandByControlId(controlId: String): CommandEntryWithDevice? {
         val controlIdParts = controlId.split(":")
 
-        val device = KdeConnect.getInstance().getDevice(controlIdParts[0])
+        val device = NfConnect.getInstance().getDevice(controlIdParts[0])
 
         if (device == null || !device.isPaired) return null
 

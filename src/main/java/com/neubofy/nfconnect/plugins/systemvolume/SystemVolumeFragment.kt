@@ -13,7 +13,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import com.neubofy.nfconnect.helpers.calculateNewVolume
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.mpris.MprisPlugin
 import com.neubofy.nfconnect.plugins.mpris.VolumeKeyListener
 import com.neubofy.nfconnect.plugins.systemvolume.SystemVolumePlugin.SinkListener
@@ -73,7 +73,7 @@ class SystemVolumeFragment : BaseFragment<SystemVolumeFragmentBinding>(),
     }
 
     private fun connectToPlugin(deviceId: String?) {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(
+        val plugin = NfConnect.getInstance().getDevicePlugin(
             deviceId,
             SystemVolumePlugin::class.java
         )
@@ -86,7 +86,7 @@ class SystemVolumeFragment : BaseFragment<SystemVolumeFragmentBinding>(),
     }
 
     private fun disconnectFromPlugin(deviceId: String?) {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(
+        val plugin = NfConnect.getInstance().getDevicePlugin(
             deviceId,
             SystemVolumePlugin::class.java
         )

@@ -102,7 +102,7 @@ class AboutFragment : BaseFragment<FragmentAboutBinding>() {
         }
 
         binding.aboutKdeButton.setOnClickListener {
-            startActivity(Intent(context, AboutKDEActivity::class.java))
+            startActivity(Intent(context, AboutNfActivity::class.java))
         }
 
         setupInfoButton(aboutData.websiteURL, binding.websiteButton)

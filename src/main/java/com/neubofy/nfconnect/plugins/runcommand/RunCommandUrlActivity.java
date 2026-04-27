@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.neubofy.nfconnect.Device;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect_tp.R;
 
 public class RunCommandUrlActivity extends AppCompatActivity {
@@ -31,7 +31,7 @@ public class RunCommandUrlActivity extends AppCompatActivity {
                 Uri uri = getIntent().getData();
                 String deviceId = uri.getPathSegments().get(0);
 
-                final Device device = KdeConnect.getInstance().getDevice(deviceId);
+                final Device device = NfConnect.getInstance().getDevice(deviceId);
 
                 if(device == null) {
                     error(R.string.runcommand_nosuchdevice);

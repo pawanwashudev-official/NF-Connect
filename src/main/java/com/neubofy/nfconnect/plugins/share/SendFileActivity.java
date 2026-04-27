@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.neubofy.nfconnect.helpers.ThreadHelper;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect_tp.R;
 
 import java.util.ArrayList;
@@ -70,7 +70,7 @@ public class SendFileActivity extends AppCompatActivity {
                         Log.w("SendFileActivity", "No files to send?");
                     } else {
                         ThreadHelper.execute(() -> {
-                            SharePlugin plugin = KdeConnect.getInstance().getDevicePlugin(mDeviceId, SharePlugin.class);
+                            SharePlugin plugin = NfConnect.getInstance().getDevicePlugin(mDeviceId, SharePlugin.class);
                             if (plugin == null) {
                                 finish();
                                 return;

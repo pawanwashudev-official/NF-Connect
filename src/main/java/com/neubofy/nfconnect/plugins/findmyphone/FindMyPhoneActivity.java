@@ -12,7 +12,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.base.BaseActivity;
 import com.neubofy.nfconnect_tp.databinding.ActivityFindMyPhoneBinding;
 
@@ -62,7 +62,7 @@ public class FindMyPhoneActivity extends BaseActivity<ActivityFindMyPhoneBinding
     @Override
     protected void onStart() {
         super.onStart();
-        FindMyPhonePlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, FindMyPhonePlugin.class);
+        FindMyPhonePlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, FindMyPhonePlugin.class);
         if (plugin == null) {
             return;
         }
@@ -74,7 +74,7 @@ public class FindMyPhoneActivity extends BaseActivity<ActivityFindMyPhoneBinding
     @Override
     protected void onStop() {
         super.onStop();
-        FindMyPhonePlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, FindMyPhonePlugin.class);
+        FindMyPhonePlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, FindMyPhonePlugin.class);
         if (plugin == null) {
             return;
         }

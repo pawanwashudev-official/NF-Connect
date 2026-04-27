@@ -31,7 +31,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.neubofy.nfconnect.Device;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.plugins.Plugin;
 import com.neubofy.nfconnect.ui.PluginSettingsActivity;
 import com.neubofy.nfconnect.ui.PluginSettingsFragment;
@@ -326,7 +326,7 @@ public class SftpSettingsFragment
 
         addStoragePreferences(preferenceCategory);
 
-        Device device = KdeConnect.getInstance().getDevice(getDeviceId());
+        Device device = NfConnect.getInstance().getDevice(getDeviceId());
 
         device.launchBackgroundReloadPluginsFromSettings();
     }

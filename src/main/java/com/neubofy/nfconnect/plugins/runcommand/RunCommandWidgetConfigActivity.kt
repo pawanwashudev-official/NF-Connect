@@ -15,7 +15,7 @@ import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.list.DeviceItem
 import com.neubofy.nfconnect.ui.list.ListAdapter
 import com.neubofy.nfconnect_tp.databinding.WidgetRemoteCommandPluginDialogBinding
@@ -40,7 +40,7 @@ class RunCommandWidgetConfigActivity : AppCompatActivity() {
         val binding = WidgetRemoteCommandPluginDialogBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val pairedDevices = KdeConnect.getInstance().devices.values.asSequence().filter(Device::isPaired).toList()
+        val pairedDevices = NfConnect.getInstance().devices.values.asSequence().filter(Device::isPaired).toList()
 
         val list = ListAdapter(this, pairedDevices.map { DeviceItem(it, ::deviceClicked) })
         binding.runCommandsDeviceList.adapter = list

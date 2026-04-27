@@ -22,7 +22,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.DeviceStats;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.plugins.Plugin;
 import com.neubofy.nfconnect.base.BaseActivity;
 import com.neubofy.nfconnect_tp.R;
@@ -74,7 +74,7 @@ public class PluginSettingsActivity
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragmentPlaceHolder);
         if (fragment == null) {
             if (pluginKey != null) {
-                Device device = KdeConnect.getInstance().getDevice(deviceId);
+                Device device = NfConnect.getInstance().getDevice(deviceId);
                 if (device != null) {
                     Plugin plugin = device.getPluginIncludingWithoutPermissions(pluginKey);
                     if (plugin != null) {

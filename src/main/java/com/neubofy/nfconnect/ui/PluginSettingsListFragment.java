@@ -16,7 +16,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.neubofy.nfconnect.Device;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.plugins.PluginFactory;
 import com.neubofy.nfconnect_tp.R;
 
@@ -77,7 +77,7 @@ public class PluginSettingsListFragment extends PreferenceFragmentCompat {
 
         final String deviceId = getArguments().getString(ARG_DEVICE_ID);
 
-        Device device = KdeConnect.getInstance().getDevice(deviceId);
+        Device device = NfConnect.getInstance().getDevice(deviceId);
         if (device == null) {
             final FragmentActivity activity = requireActivity();
             activity.runOnUiThread(activity::finish);

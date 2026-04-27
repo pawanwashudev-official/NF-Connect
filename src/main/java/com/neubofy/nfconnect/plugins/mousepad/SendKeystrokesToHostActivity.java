@@ -18,7 +18,7 @@ import com.neubofy.nfconnect.BackgroundService;
 import com.neubofy.nfconnect.Device;
 import com.neubofy.nfconnect.helpers.SafeTextChecker;
 import com.neubofy.nfconnect.helpers.WindowHelper;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.ui.list.DeviceItem;
 import com.neubofy.nfconnect.ui.list.ListAdapter;
 import com.neubofy.nfconnect.ui.list.SectionItem;
@@ -102,7 +102,7 @@ public class SendKeystrokesToHostActivity extends BaseActivity<ActivitySendkeyst
 
                 // If we trust the sending app, check if there is only one device paired / reachable...
                 if (contentIsOkay) {
-                    List<Device> reachableDevices = KdeConnect.getInstance().getDevices().values().stream()
+                    List<Device> reachableDevices = NfConnect.getInstance().getDevices().values().stream()
                             .filter(Device::isReachable)
                             .limit(2)  // we only need the first two; if its more than one, we need to show the user the device-selection
                             .collect(Collectors.toList());
@@ -116,7 +116,7 @@ public class SendKeystrokesToHostActivity extends BaseActivity<ActivitySendkeyst
                     }
                 }
 
-                KdeConnect.getInstance().addDeviceListChangedCallback("SendKeystrokesToHostActivity", () -> runOnUiThread(this::updateDeviceList));
+                NfConnect.getInstance().addDeviceListChangedCallback("SendKeystrokesToHostActivity", () -> runOnUiThread(this::updateDeviceList));
                 BackgroundService.ForceRefreshConnections(this); // force a network re-discover
                 updateDeviceList();
             } else {
@@ -128,14 +128,14 @@ public class SendKeystrokesToHostActivity extends BaseActivity<ActivitySendkeyst
 
     @Override
     protected void onStop() {
-        KdeConnect.getInstance().removeDeviceListChangedCallback("SendKeystrokesToHostActivity");
+        NfConnect.getInstance().removeDeviceListChangedCallback("SendKeystrokesToHostActivity");
         super.onStop();
     }
 
     private void sendKeys(Device deviceId) {
         String toSend;
         if (getBinding().textToSend.getText() != null && (toSend = getBinding().textToSend.getText().toString().trim()).length() > 0) {
-            MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId.getDeviceId(), MousePadPlugin.class);
+            MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId.getDeviceId(), MousePadPlugin.class);
             if (plugin == null) {
                 finish();
                 return;
@@ -152,7 +152,7 @@ public class SendKeystrokesToHostActivity extends BaseActivity<ActivitySendkeyst
 
 
     private void updateDeviceList() {
-        Collection<Device> devices = KdeConnect.getInstance().getDevices().values();
+        Collection<Device> devices = NfConnect.getInstance().getDevices().values();
         final ArrayList<Device> devicesList = new ArrayList<>();
         final ArrayList<ListAdapter.Item> items = new ArrayList<>();
 

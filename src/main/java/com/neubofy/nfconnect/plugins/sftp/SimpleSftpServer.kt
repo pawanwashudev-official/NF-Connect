@@ -263,7 +263,7 @@ internal class SimpleSftpServer {
         val SUPPORTS_NATIVEFS = Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
 
         private val PORT_RANGE = 1739..1764
-        const val USER: String = "kdeconnect"
+        const val USER: String = "NfConnect"
 
         init {
             System.setProperty(SECURITY_PROVIDER_REGISTRARS, "") // disable BouncyCastle

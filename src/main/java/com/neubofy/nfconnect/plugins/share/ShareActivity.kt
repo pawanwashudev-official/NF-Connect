@@ -18,7 +18,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.preference.PreferenceManager
 import com.neubofy.nfconnect.BackgroundService
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.helpers.WindowHelper
 import com.neubofy.nfconnect.ui.list.DeviceItem
@@ -69,7 +69,7 @@ class ShareActivity : BaseActivity<ActivityShareBinding>() {
             return
         }
 
-        val devices = KdeConnect.getInstance().devices.values
+        val devices = NfConnect.getInstance().devices.values
         val devicesList = mutableListOf<Device>()
         val items = mutableListOf<ListAdapter.Item>()
 
@@ -128,7 +128,7 @@ class ShareActivity : BaseActivity<ActivityShareBinding>() {
         intent: Intent
     ) {
         val plugin: SharePlugin? =
-            KdeConnect.getInstance().getDevicePlugin(
+            NfConnect.getInstance().getDevicePlugin(
                 deviceId = device.deviceId,
                 pluginClass = SharePlugin::class.java
             )
@@ -198,13 +198,13 @@ class ShareActivity : BaseActivity<ActivityShareBinding>() {
 
         if (deviceId != null) {
             val plugin: SharePlugin? =
-                KdeConnect.getInstance().getDevicePlugin(deviceId, SharePlugin::class.java)
+                NfConnect.getInstance().getDevicePlugin(deviceId, SharePlugin::class.java)
             if (plugin != null) {
                 plugin.share(intent)
             } else {
                 val extras = intent.extras
                 if (extras != null && extras.containsKey(Intent.EXTRA_TEXT)) {
-                    val device = KdeConnect.getInstance().getDevice(id = deviceId)
+                    val device = NfConnect.getInstance().getDevice(id = deviceId)
                     if (doesIntentContainUrl(intent) && device != null && !device.isReachable) {
                         val text = extras.getString(Intent.EXTRA_TEXT)
                         storeUrlForFutureDelivery(
@@ -216,7 +216,7 @@ class ShareActivity : BaseActivity<ActivityShareBinding>() {
             }
             finish()
         } else {
-            KdeConnect.getInstance().addDeviceListChangedCallback(key = "ShareActivity") {
+            NfConnect.getInstance().addDeviceListChangedCallback(key = "ShareActivity") {
                 runOnUiThread { updateDeviceList() }
             }
             BackgroundService.ForceRefreshConnections(context = this) // force a network re-discover
@@ -225,7 +225,7 @@ class ShareActivity : BaseActivity<ActivityShareBinding>() {
     }
 
     override fun onStop() {
-        KdeConnect.getInstance().removeDeviceListChangedCallback(key = "ShareActivity")
+        NfConnect.getInstance().removeDeviceListChangedCallback(key = "ShareActivity")
         super.onStop()
     }
 

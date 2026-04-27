@@ -74,14 +74,14 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     <application
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:label="@string/kde_connect"
+        android:label="@string/nf_connect"
         android:banner="@mipmap/ic_launcher_banner"
         android:supportsRtl="true"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/KdeConnectTheme.NoActionBar"
-        android:name="com.neubofy.nfconnect.KdeConnect"
+        android:theme="@style/NfConnectTheme.NoActionBar"
+        android:name="com.neubofy.nfconnect.NfConnect"
         android:enableOnBackInvokedCallback="true"
         android:requestLegacyExternalStorage="true"> <!-- requestLegacyExternalStorage is only used in Android 10: https://developer.android.com/training/data-storage/use-cases#opt-out-in-production-app -->
 
@@ -159,7 +159,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </activity>
         <activity
             android:name="com.neubofy.nfconnect.plugins.share.SendFileActivity"
-            android:label="KDE Connect"
+            android:label="NF Connect"
             android:exported="true"
             android:parentActivityName="com.neubofy.nfconnect.ui.MainActivity">
             <meta-data
@@ -167,7 +167,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 android:value="com.neubofy.nfconnect.ui.MainActivity" />
         </activity>
 
-        <receiver android:name="com.neubofy.nfconnect.KdeConnectBroadcastReceiver"
+        <receiver android:name="com.neubofy.nfconnect.NfConnectBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
@@ -270,7 +270,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
 
                 <data
                     android:host="runcommand"
-                    android:scheme="kdeconnect" />
+                    android:scheme="NfConnect" />
             </intent-filter>
         </activity>
         <activity
@@ -440,8 +440,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </activity>
 
         <activity
-            android:name="com.neubofy.nfconnect.ui.about.AboutKDEActivity"
-            android:label="@string/about_kde"
+            android:name="com.neubofy.nfconnect.ui.about.AboutNfActivity"
+            android:label="@string/about_neubofy"
             android:parentActivityName="com.neubofy.nfconnect.ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -469,7 +469,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         </service>
 
         <service android:name="com.neubofy.nfconnect.plugins.runcommand.RunCommandControlsProviderService"
-            android:label="@string/kde_connect"
+            android:label="@string/nf_connect"
             android:exported="true"
             android:permission="android.permission.BIND_CONTROLS">
             <intent-filter>

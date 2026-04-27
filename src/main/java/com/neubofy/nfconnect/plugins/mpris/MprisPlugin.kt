@@ -376,7 +376,7 @@ class MprisPlugin : Plugin() {
                     Handler(Looper.getMainLooper()).post {
                         val notificationManager = context.getSystemService<NotificationManager>()!!
                         val builder = NotificationCompat.Builder(context, NotificationHelper.Channels.CONTINUEWATCHING)
-                            .setContentTitle(context.resources.getString(R.string.kde_connect))
+                            .setContentTitle(context.resources.getString(R.string.nf_connect))
                             .setSmallIcon(R.drawable.ic_play_white)
                             .setTimeoutAfter(3000)
                             .setContentIntent(pendingIntent)
@@ -505,7 +505,7 @@ class MprisPlugin : Plugin() {
 
     companion object {
         const val DEVICE_ID_KEY: String = "deviceId"
-        private const val PACKET_TYPE_MPRIS = "kdeconnect.mpris"
-        private const val PACKET_TYPE_MPRIS_REQUEST = "kdeconnect.mpris.request"
+        private const val PACKET_TYPE_MPRIS = "NfConnect.mpris"
+        private const val PACKET_TYPE_MPRIS_REQUEST = "NfConnect.mpris.request"
     }
 }

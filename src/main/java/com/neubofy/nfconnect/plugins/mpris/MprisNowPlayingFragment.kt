@@ -32,7 +32,7 @@ import com.neubofy.nfconnect.helpers.DEFAULT_MAX_VOLUME
 import com.neubofy.nfconnect.helpers.DEFAULT_VOLUME_STEP
 import com.neubofy.nfconnect.helpers.VideoUrlsHelper
 import com.neubofy.nfconnect.helpers.calculateNewVolume
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.mpris.MprisPlugin.MprisPlayer
 import com.neubofy.nfconnect_tp.R
 import com.neubofy.nfconnect_tp.databinding.MprisControlBinding
@@ -155,7 +155,7 @@ class MprisNowPlayingFragment : Fragment(), VolumeKeyListener {
     }
 
     private fun disconnectFromPlugin() {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MprisPlugin::class.java) ?: return
+        val plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MprisPlugin::class.java) ?: return
         plugin.apply {
             removePlayerListUpdatedHandler("activity")
             removePlayerStatusUpdatedHandler("activity")
@@ -163,7 +163,7 @@ class MprisNowPlayingFragment : Fragment(), VolumeKeyListener {
     }
 
     private fun connectToPlugin() {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MprisPlugin::class.java)
+        val plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MprisPlugin::class.java)
         if (plugin == null) {
             if (isAdded) {
                 requireActivity().finish()

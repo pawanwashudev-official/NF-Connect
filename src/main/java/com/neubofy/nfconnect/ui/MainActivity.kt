@@ -39,7 +39,7 @@ import org.apache.commons.lang3.ArrayUtils
 import com.neubofy.nfconnect.BackgroundService
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.helpers.DeviceHelper
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.plugins.share.ShareSettingsFragment
 import com.neubofy.nfconnect.ui.about.AboutFragment
 import com.neubofy.nfconnect.ui.about.getApplicationAboutData
@@ -225,7 +225,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private fun onPairResultFromNotification(deviceId: String?, pairStatus: String): String? {
         assert(deviceId != null)
         if (pairStatus != PAIRING_PENDING) {
-            val device = KdeConnect.getInstance().getDevice(deviceId)
+            val device = NfConnect.getInstance().getDevice(deviceId)
             if (device == null) {
                 Log.w(this::class.simpleName, "Reject pairing - device no longer exists: $deviceId")
                 return null
@@ -262,7 +262,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
         mMapMenuToDeviceId.clear()
         val devicesMenu = menu.addSubMenu(R.string.devices)
         var id = MENU_ENTRY_DEVICE_FIRST_ID
-        val devices: Collection<Device> = KdeConnect.getInstance().devices.values
+        val devices: Collection<Device> = NfConnect.getInstance().devices.values
         for (device in devices) {
             if (device.isReachable && device.isPaired) {
                 val item = devicesMenu.add(Menu.FIRST, id++, 1, device.name)
@@ -291,7 +291,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     override fun onStart() {
         super.onStart()
         BackgroundService.Start(applicationContext)
-        KdeConnect.getInstance().addDeviceListChangedCallback(this::class.simpleName!!) { runOnUiThread { updateDeviceList() } }
+        NfConnect.getInstance().addDeviceListChangedCallback(this::class.simpleName!!) { runOnUiThread { updateDeviceList() } }
         updateDeviceList()
         onBackPressedDispatcher.addCallback(mainFragmentCallback)
         onBackPressedDispatcher.addCallback(closeDrawerCallback)
@@ -299,7 +299,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     }
 
     override fun onStop() {
-        KdeConnect.getInstance().removeDeviceListChangedCallback(this::class.simpleName!!)
+        NfConnect.getInstance().removeDeviceListChangedCallback(this::class.simpleName!!)
         mainFragmentCallback.remove()
         closeDrawerCallback.remove()
         super.onStop()
@@ -342,7 +342,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
         when {
             requestCode == RESULT_NEEDS_RELOAD -> {
                 CoroutineScope(Dispatchers.IO).launch {
-                    KdeConnect.getInstance().devices.values.forEach(Device::reloadPluginsFromSettings)
+                    NfConnect.getInstance().devices.values.forEach(Device::reloadPluginsFromSettings)
                 }
             }
             requestCode == STORAGE_LOCATION_CONFIGURED && resultCode == RESULT_OK && data != null -> {
@@ -386,7 +386,7 @@ class MainActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
 
             //New permission granted, reload plugins
             CoroutineScope(Dispatchers.IO).launch {
-                KdeConnect.getInstance().devices.values.forEach(Device::reloadPluginsFromSettings)
+                NfConnect.getInstance().devices.values.forEach(Device::reloadPluginsFromSettings)
             }
         }
     }

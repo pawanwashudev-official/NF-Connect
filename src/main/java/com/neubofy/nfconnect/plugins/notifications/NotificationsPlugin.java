@@ -65,10 +65,10 @@ import java.util.List;
 @PluginFactory.LoadablePlugin
 public class NotificationsPlugin extends Plugin implements NotificationReceiver.NotificationListener {
 
-    private final static String PACKET_TYPE_NOTIFICATION = "kdeconnect.notification";
-    private final static String PACKET_TYPE_NOTIFICATION_REQUEST = "kdeconnect.notification.request";
-    private final static String PACKET_TYPE_NOTIFICATION_REPLY = "kdeconnect.notification.reply";
-    private final static String PACKET_TYPE_NOTIFICATION_ACTION = "kdeconnect.notification.action";
+    private final static String PACKET_TYPE_NOTIFICATION = "NfConnect.notification";
+    private final static String PACKET_TYPE_NOTIFICATION_REQUEST = "NfConnect.notification.request";
+    private final static String PACKET_TYPE_NOTIFICATION_REPLY = "NfConnect.notification.reply";
+    private final static String PACKET_TYPE_NOTIFICATION_ACTION = "NfConnect.notification.action";
     private final static String PREF_KEY = "prefKey";
     protected static final int PREF_NOTIFICATION_SCREEN_OFF = R.string.screen_off_notification_state;
 
@@ -626,7 +626,7 @@ public class NotificationsPlugin extends Plugin implements NotificationReceiver.
         String result;
         // first check if it's one of our remoteIds
         String tag = statusBarNotification.getTag();
-        if (tag != null && tag.startsWith("kdeconnectId:"))
+        if (tag != null && tag.startsWith("NfConnectId:"))
             result = Integer.toString(statusBarNotification.getId());
         else {
             result = statusBarNotification.getKey();

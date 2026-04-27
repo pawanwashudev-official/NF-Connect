@@ -88,7 +88,7 @@ class PresenterPlugin : Plugin() {
     }
 
     companion object {
-        private const val PACKET_TYPE_PRESENTER = "kdeconnect.presenter"
-        private const val PACKET_TYPE_MOUSEPAD_REQUEST = "kdeconnect.mousepad.request"
+        private const val PACKET_TYPE_PRESENTER = "NfConnect.presenter"
+        private const val PACKET_TYPE_MOUSEPAD_REQUEST = "NfConnect.mousepad.request"
     }
 }

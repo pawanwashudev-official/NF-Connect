@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.neubofy.nfconnect.Device;
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.ui.list.ListAdapter;
 import com.neubofy.nfconnect.base.BaseActivity;
 import com.neubofy.nfconnect_tp.R;
@@ -54,7 +54,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
     private List<CommandEntry> commandItems;
 
     private void updateView() {
-        RunCommandPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
+        RunCommandPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -96,7 +96,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         deviceId = getIntent().getStringExtra("deviceId");
-        Device device = KdeConnect.getInstance().getDevice(deviceId);
+        Device device = NfConnect.getInstance().getDevice(deviceId);
         if (device != null) {
             getSupportActionBar().setSubtitle(device.getName());
             RunCommandPlugin plugin = device.getPlugin(RunCommandPlugin.class);
@@ -131,7 +131,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         if (item.getItemId() == R.id.copy_url_to_clipboard) {
             CommandEntry entry = commandItems.get(info.position);
-            String url = "kdeconnect://runcommand/" + deviceId + "/" + entry.getKey();
+            String url = "NfConnect://runcommand/" + deviceId + "/" + entry.getKey();
             ClipboardManager cm = ContextCompat.getSystemService(this, ClipboardManager.class);
             cm.setText(url);
             Toast toast = Toast.makeText(this, R.string.clipboard_toast, Toast.LENGTH_SHORT);
@@ -145,7 +145,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
     protected void onResume() {
         super.onResume();
 
-        RunCommandPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
+        RunCommandPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -157,7 +157,7 @@ public class RunCommandActivity extends BaseActivity<ActivityRunCommandBinding> 
     protected void onPause() {
         super.onPause();
 
-        RunCommandPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
+        RunCommandPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin.class);
         if (plugin == null) {
             return;
         }

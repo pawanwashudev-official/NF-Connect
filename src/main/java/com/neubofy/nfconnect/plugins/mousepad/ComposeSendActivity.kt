@@ -23,11 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.preference.PreferenceManager
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.compose.KdeTextButton
 import com.neubofy.nfconnect.ui.compose.KdeTextField
-import com.neubofy.nfconnect.ui.compose.KdeTheme
-import com.neubofy.nfconnect.ui.compose.KdeTopAppBar
+import com.neubofy.nfconnect.ui.compose.NfTheme
+import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
 import com.neubofy.nfconnect_tp.R
 import androidx.core.content.edit
@@ -59,7 +59,7 @@ class ComposeSendActivity : AppCompatActivity() {
     }
 
     private fun sendComposed() {
-        val plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin::class.java)
+        val plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin::class.java)
         if (plugin == null) {
             finish()
             return
@@ -74,11 +74,11 @@ class ComposeSendActivity : AppCompatActivity() {
 
     @Composable
     private fun ComposeSendScreen() {
-        KdeTheme(this) {
+        NfTheme(this) {
             Scaffold(
                 modifier = Modifier.safeDrawPadding(),
                 topBar = {
-                    KdeTopAppBar(
+                    NfTopAppBar(
                         title = stringResource(R.string.compose_send_title),
                         navIconOnClick = { onBackPressedDispatcher.onBackPressed() },
                         navIconDescription = getString(androidx.appcompat.R.string.abc_action_bar_up_description),

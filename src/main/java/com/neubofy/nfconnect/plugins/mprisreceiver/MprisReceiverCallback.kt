@@ -44,7 +44,7 @@ internal class MprisReceiverCallback : MediaController.Callback {
         // there's probably a better way to do this, but meh
         // TODO: do we want to include the player name?
         return Uri.Builder()
-            .scheme("kdeconnect")
+            .scheme("NfConnect")
             .path("/artUri")
             .appendQueryParameter(kind, data)
             .build().toString()

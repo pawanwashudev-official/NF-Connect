@@ -29,7 +29,7 @@ import com.neubofy.nfconnect.BackgroundService.Companion.ForceRefreshConnections
 import com.neubofy.nfconnect.BackgroundService.Companion.instance
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.helpers.TrustedNetworkHelper.Companion.isTrustedNetwork
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.list.ListAdapter
 import com.neubofy.nfconnect.ui.list.PairingDeviceItem
 import com.neubofy.nfconnect.ui.list.SectionItem
@@ -201,7 +201,7 @@ class PairingFragment : BaseFragment<DevicesListBinding>() {
             val connectedSection: SectionItem
             val res = resources
 
-            val allDevices = KdeConnect.getInstance().devices.values.filter {
+            val allDevices = NfConnect.getInstance().devices.values.filter {
                 // Since we don't delete unpaired devices after they disconnect, we need to filter them out here
                 it.isReachable || it.isPaired
             }
@@ -271,7 +271,7 @@ class PairingFragment : BaseFragment<DevicesListBinding>() {
     }
 
     private fun updateConnectivityInfoHeader(isConnectedToNonCellularNetwork: Boolean) {
-        val devices: Collection<Device> = KdeConnect.getInstance().devices.values
+        val devices: Collection<Device> = NfConnect.getInstance().devices.values
         var someDevicesReachable = false
         for (device in devices) {
             if (device.isReachable) {
@@ -308,7 +308,7 @@ class PairingFragment : BaseFragment<DevicesListBinding>() {
 
     override fun onStart() {
         super.onStart()
-        KdeConnect.getInstance().addDeviceListChangedCallback("PairingFragment") {
+        NfConnect.getInstance().addDeviceListChangedCallback("PairingFragment") {
             mActivity?.runOnUiThread { this.updateDeviceList() }
         }
         ForceRefreshConnections(requireContext()) // force a network re-discover
@@ -316,7 +316,7 @@ class PairingFragment : BaseFragment<DevicesListBinding>() {
     }
 
     override fun onStop() {
-        KdeConnect.getInstance().removeDeviceListChangedCallback("PairingFragment")
+        NfConnect.getInstance().removeDeviceListChangedCallback("PairingFragment")
         super.onStop()
     }
 

@@ -134,7 +134,7 @@ class ClipboardPlugin : Plugin() {
          * "content": "password"
          * }
          */
-        private const val PACKET_TYPE_CLIPBOARD = "kdeconnect.clipboard"
+        private const val PACKET_TYPE_CLIPBOARD = "NfConnect.clipboard"
 
         /**
          * Packet containing clipboard contents and a timestamp that the contents were last updated, sent
@@ -151,6 +151,6 @@ class ClipboardPlugin : Plugin() {
          * "content": "password"
          * }
          */
-        private const val PACKET_TYPE_CLIPBOARD_CONNECT = "kdeconnect.clipboard.connect"
+        private const val PACKET_TYPE_CLIPBOARD_CONNECT = "NfConnect.clipboard.connect"
     }
 }

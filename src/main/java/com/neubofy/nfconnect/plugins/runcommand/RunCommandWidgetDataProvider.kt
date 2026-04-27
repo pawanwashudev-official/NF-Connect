@@ -15,7 +15,7 @@ import android.view.View
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import android.widget.RemoteViewsService.RemoteViewsFactory
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect_tp.R
 
 internal class RunCommandWidgetDataProvider(private val context: Context, val intent: Intent?) : RemoteViewsFactory {
@@ -26,7 +26,7 @@ internal class RunCommandWidgetDataProvider(private val context: Context, val in
     override fun onCreate() {
         widgetId = intent?.getIntExtra(EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID) ?: AppWidgetManager.INVALID_APPWIDGET_ID
         if (widgetId == AppWidgetManager.INVALID_APPWIDGET_ID) {
-            Log.e("KDEConnect/Widget", "RunCommandWidgetDataProvider: No widget id extra was set")
+            Log.e("NfConnect/Widget", "RunCommandWidgetDataProvider: No widget id extra was set")
             return
         }
         deviceId = loadWidgetDeviceIdPref(context, widgetId)
@@ -39,7 +39,7 @@ internal class RunCommandWidgetDataProvider(private val context: Context, val in
     override fun onDestroy() {}
 
     private fun getPlugin(): RunCommandPlugin? {
-        return KdeConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin::class.java)
+        return NfConnect.getInstance().getDevicePlugin(deviceId, RunCommandPlugin::class.java)
     }
 
     override fun getCount(): Int {

@@ -15,7 +15,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.preference.PreferenceManager
-import com.neubofy.nfconnect.KdeConnect.Companion.getInstance
+import com.neubofy.nfconnect.NfConnect.Companion.getInstance
 import com.neubofy.nfconnect.ui.MainActivity
 import com.neubofy.nfconnect.ui.PermissionsAlertDialogFragment
 import com.neubofy.nfconnect.base.BaseActivity

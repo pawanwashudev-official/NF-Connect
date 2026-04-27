@@ -235,7 +235,7 @@ public class LanLinkProvider extends BaseLinkProvider {
 
         int tcpPort = identityPacket.getInt("tcpPort", MIN_PORT);
         if (tcpPort < MIN_PORT || tcpPort > MAX_PORT) {
-            Log.e("LanLinkProvider", "TCP port outside of kdeconnect's range");
+            Log.e("LanLinkProvider", "TCP port outside of NfConnect's range");
             return;
         }
 

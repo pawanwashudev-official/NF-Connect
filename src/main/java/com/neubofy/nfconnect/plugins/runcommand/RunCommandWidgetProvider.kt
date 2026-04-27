@@ -17,7 +17,7 @@ import android.util.Log
 import android.widget.RemoteViews
 import androidx.core.net.toUri
 import com.neubofy.nfconnect.Device
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect_tp.BuildConfig
 import com.neubofy.nfconnect_tp.R
 
@@ -41,13 +41,13 @@ class RunCommandWidgetProvider : AppWidgetProvider() {
 
     override fun onEnabled(context: Context) {
         super.onEnabled(context)
-        KdeConnect.getInstance().addDeviceListChangedCallback("RunCommandWidget") {
+        NfConnect.getInstance().addDeviceListChangedCallback("RunCommandWidget") {
             forceRefreshWidgets(context)
         }
     }
 
     override fun onDisabled(context: Context) {
-        KdeConnect.getInstance().removeDeviceListChangedCallback("RunCommandWidget")
+        NfConnect.getInstance().removeDeviceListChangedCallback("RunCommandWidget")
         super.onDisabled(context)
     }
 
@@ -57,7 +57,7 @@ class RunCommandWidgetProvider : AppWidgetProvider() {
         if (intent.action == RUN_COMMAND_ACTION) {
             val targetCommand = intent.getStringExtra(TARGET_COMMAND)
             val targetDevice = intent.getStringExtra(TARGET_DEVICE)
-            val plugin = KdeConnect.getInstance().getDevicePlugin(targetDevice, RunCommandPlugin::class.java)
+            val plugin = NfConnect.getInstance().getDevicePlugin(targetDevice, RunCommandPlugin::class.java)
             if (plugin != null) {
                 try {
                     plugin.runCommand(targetCommand)
@@ -109,7 +109,7 @@ internal fun updateAppWidget(
 
     // Determine which device provided these commands
     val deviceId = loadWidgetDeviceIdPref(context, appWidgetId)
-    val device: Device? = if (deviceId != null) KdeConnect.getInstance().getDevice(deviceId) else null
+    val device: Device? = if (deviceId != null) NfConnect.getInstance().getDevice(deviceId) else null
 
     val views = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.widget_remotecommandplugin)
     assignTitleIntent(context, appWidgetId, views)
@@ -124,9 +124,9 @@ internal fun updateAppWidget(
     if (device == null) {
         // There are two reasons we reach this condition:
         // 1. there is no preference string for this widget id
-        // 2. the string id does not match any devices in KdeConnect.getInstance()
+        // 2. the string id does not match any devices in NfConnect.getInstance()
         // In both cases, we want the user to assign a device to this widget
-        views.setTextViewText(R.id.widget_title_text, context.getString(R.string.kde_connect))
+        views.setTextViewText(R.id.widget_title_text, context.getString(R.string.nf_connect))
         views.setTextViewText(R.id.widget_error_text, "Whose commands should we show? Click the title to set a device.")
     } else {
         views.setTextViewText(R.id.widget_title_text, device.name)

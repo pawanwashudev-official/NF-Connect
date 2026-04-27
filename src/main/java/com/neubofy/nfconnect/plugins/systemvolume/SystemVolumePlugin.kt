@@ -41,7 +41,7 @@ class SystemVolumePlugin : Plugin() {
                     sinkMap[sink.name] = sink
                 }
             } catch (e: JSONException) {
-                Log.e("KDEConnect", "Exception", e)
+                Log.e("NfConnect", "Exception", e)
             }
 
             synchronized(listeners) {
@@ -107,7 +107,7 @@ class SystemVolumePlugin : Plugin() {
     }
 
     companion object {
-        private const val PACKET_TYPE_SYSTEMVOLUME = "kdeconnect.systemvolume"
-        private const val PACKET_TYPE_SYSTEMVOLUME_REQUEST = "kdeconnect.systemvolume.request"
+        private const val PACKET_TYPE_SYSTEMVOLUME = "NfConnect.systemvolume"
+        private const val PACKET_TYPE_SYSTEMVOLUME_REQUEST = "NfConnect.systemvolume.request"
     }
 }

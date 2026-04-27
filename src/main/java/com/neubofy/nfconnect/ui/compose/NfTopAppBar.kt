@@ -21,8 +21,8 @@ import com.neubofy.nfconnect_tp.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun KdeTopAppBar(
-    title: String = stringResource(R.string.kde_connect),
+fun NfTopAppBar(
+    title: String = stringResource(R.string.nf_connect),
     navIcon: ImageVector = Icons.AutoMirrored.Filled.ArrowBack,
     navIconDescription: String = "",
     navIconOnClick: () -> Unit, // = { onBackPressedDispatcher.onBackPressed() }

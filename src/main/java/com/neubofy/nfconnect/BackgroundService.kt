@@ -44,12 +44,12 @@ import com.neubofy.nfconnect_tp.R
 /**
  * This class (still) does 3 things:
  * - Keeps the app running by creating a foreground notification.
- * - Holds references to the active LinkProviders, but doesn't handle the DeviceLink those create (the KdeConnect class does that).
+ * - Holds references to the active LinkProviders, but doesn't handle the DeviceLink those create (the NfConnect class does that).
  * - Listens for network connectivity changes and tells the LinkProviders to re-check for devices.
- * It can be started by the KdeConnectBroadcastReceiver on some events or when the MainActivity is launched.
+ * It can be started by the NfConnectBroadcastReceiver on some events or when the MainActivity is launched.
  */
 class BackgroundService : Service() {
-    private lateinit var applicationInstance: KdeConnect
+    private lateinit var applicationInstance: NfConnect
 
     private val linkProviders = mutableListOf<BaseLinkProvider>()
 
@@ -99,11 +99,11 @@ class BackgroundService : Service() {
     @MainThread
     override fun onCreate() {
         super.onCreate()
-        Log.d("KdeConnect/BgService", "onCreate")
-        this.applicationInstance = KdeConnect.getInstance()
+        Log.d("NfConnect/BgService", "onCreate")
+        this.applicationInstance = NfConnect.getInstance()
         instance = this
 
-        KdeConnect.getInstance().addDeviceListChangedCallback("BackgroundService", this::updateForegroundNotification)
+        NfConnect.getInstance().addDeviceListChangedCallback("BackgroundService", this::updateForegroundNotification)
 
         // Register screen on listener
         val filter = IntentFilter(Intent.ACTION_SCREEN_ON)
@@ -111,7 +111,7 @@ class BackgroundService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION)
         }
-        registerReceiver(KdeConnectBroadcastReceiver(), filter)
+        registerReceiver(NfConnectBroadcastReceiver(), filter)
 
         // Watch for changes on all network connections except cellular networks
         val networkRequestBuilder = createNonCellularNetworkRequestBuilder()
@@ -182,7 +182,7 @@ class BackgroundService : Service() {
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
             // Pre-oreo, the notification will have an empty title line without this
-            notification.setContentTitle(getString(R.string.kde_connect))
+            notification.setContentTitle(getString(R.string.nf_connect))
         }
 
         if (connectedDevices.isEmpty()) {
@@ -200,7 +200,7 @@ class BackgroundService : Service() {
 
             if (connectedDeviceIds.size == 1) {
                 val deviceId = connectedDeviceIds[0]
-                val device = KdeConnect.getInstance().getDevice(deviceId)
+                val device = NfConnect.getInstance().getDevice(deviceId)
                 if (device != null) {
                     // Adding two action buttons only when there is a single device connected.
                     // Setting up Send File Intent.
@@ -224,12 +224,12 @@ class BackgroundService : Service() {
     }
 
     override fun onDestroy() {
-        Log.d("KdeConnect/BgService", "onDestroy")
+        Log.d("NfConnect/BgService", "onDestroy")
         initialized = false
         for (linkProvider in linkProviders) {
             linkProvider.onStop()
         }
-        KdeConnect.getInstance().removeDeviceListChangedCallback("BackgroundService")
+        NfConnect.getInstance().removeDeviceListChangedCallback("BackgroundService")
         super.onDestroy()
     }
 

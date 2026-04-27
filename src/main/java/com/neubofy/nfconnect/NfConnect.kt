@@ -38,7 +38,7 @@ import java.util.concurrent.ConcurrentHashMap
  * It also takes care of initializing all classes that need so when the app boots.
  * It provides a ConnectionReceiver that the BackgroundService uses to ping this class every time a new DeviceLink is created.
  */
-class KdeConnect : Application() {
+class NfConnect : Application() {
     fun interface DeviceListChangedCallback {
         fun onDeviceListChanged()
     }
@@ -51,7 +51,7 @@ class KdeConnect : Application() {
         super.onCreate()
         _instance = this
         setupSL4JLogging()
-        Log.d("KdeConnect/Application", "onCreate")
+        Log.d("NfConnect/Application", "onCreate")
         ThemeUtil.setUserPreferredTheme(this)
         DeviceHelper.initializeDeviceId(this)
         RsaHelper.initialiseRsaKeys(this)
@@ -89,11 +89,11 @@ class KdeConnect : Application() {
     private fun setupSL4JLogging() {
         HandroidLoggerAdapter.DEBUG = BuildConfig.DEBUG
         HandroidLoggerAdapter.ANDROID_API_LEVEL = Build.VERSION.SDK_INT
-        HandroidLoggerAdapter.APP_NAME = "KDEConnect"
+        HandroidLoggerAdapter.APP_NAME = "NfConnect"
     }
 
     override fun onTerminate() {
-        Log.d("KdeConnect/Application", "onTerminate")
+        Log.d("NfConnect/Application", "onTerminate")
         super.onTerminate()
     }
 
@@ -126,7 +126,7 @@ class KdeConnect : Application() {
         // Log.e("BackgroundService", "Loading remembered trusted devices")
         val trustedDevices = TrustedDevices.getAllTrustedDevices(this)
         trustedDevices.asSequence()
-            .onEach { Log.d("KdeConnect", "Loading device $it") }
+            .onEach { Log.d("NfConnect", "Loading device $it") }
             .forEach {
                 try {
                     val device = Device(applicationContext, it)
@@ -142,7 +142,7 @@ class KdeConnect : Application() {
                     device.addPairingCallback(devicePairingCallback)
                 } catch (e: CertificateException) {
                     Log.w(
-                        "KdeConnect",
+                        "NfConnect",
                         "Couldn't load the certificate for a remembered device. Removing from trusted list.", e
                     )
                     TrustedDevices.removeTrustedDevice(this, it)
@@ -178,7 +178,7 @@ class KdeConnect : Application() {
             if (device != null) {
                 device.addLink(link)
             } else {
-                device = Device(this@KdeConnect, link)
+                device = Device(this@NfConnect, link)
                 devices[link.deviceId] = device
                 device.addPairingCallback(devicePairingCallback)
             }
@@ -204,7 +204,7 @@ class KdeConnect : Application() {
         override fun onDeviceInfoUpdated(deviceInfo: DeviceInfo) {
             val device = devices[deviceInfo.id]
             if (device == null) {
-                Log.e("KdeConnect", "onDeviceInfoUpdated for an unknown device")
+                Log.e("NfConnect", "onDeviceInfoUpdated for an unknown device")
                 return
             }
             val hasChanges = device.updateDeviceInfo(deviceInfo)
@@ -223,18 +223,18 @@ class KdeConnect : Application() {
         //       `Runtime.getRuntime().gc()` to actually make them disappear. If we have leaks,
         //       deleting devices from the map is actually counterproductive because each time we
         //       detect the same device, a new Device object will be created (and leaked again).
-        Log.i("KdeConnect", "Scheduled for deletion: $device, paired: ${device.isPaired}, reachable: ${device.isReachable}")
+        Log.i("NfConnect", "Scheduled for deletion: $device, paired: ${device.isPaired}, reachable: ${device.isReachable}")
         ThreadHelper.execute {
             try {Thread.sleep(1000)} catch (_: InterruptedException) { }
             if (device.isReachable) {
-                Log.i("KdeConnect", "Not deleting device since it's reachable again: $device")
+                Log.i("NfConnect", "Not deleting device since it's reachable again: $device")
                 return@execute
             }
             if (device.isPaired) {
-                Log.i("KdeConnect", "Not deleting device since it's still paired: $device")
+                Log.i("NfConnect", "Not deleting device since it's still paired: $device")
                 return@execute
             }
-            Log.i("KdeConnect", "Deleting unpaired and unreachable device: $device")
+            Log.i("NfConnect", "Deleting unpaired and unreachable device: $device")
             device.removePairingCallback(devicePairingCallback)
             devices.remove(device.deviceId)
         }
@@ -242,9 +242,9 @@ class KdeConnect : Application() {
 
     companion object {
         @JvmStatic
-        private lateinit var _instance: KdeConnect
+        private lateinit var _instance: NfConnect
 
         @JvmStatic
-        fun getInstance(): KdeConnect = _instance
+        fun getInstance(): NfConnect = _instance
     }
 }

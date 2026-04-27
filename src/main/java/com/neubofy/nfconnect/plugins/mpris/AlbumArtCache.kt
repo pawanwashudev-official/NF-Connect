@@ -73,13 +73,13 @@ internal object AlbumArtCache {
     private val registeredPlugins = CopyOnWriteArrayList<MprisPlugin>()
 
     @JvmStatic
-    val ALLOWED_SCHEMES = listOf("http", "https", "file", "kdeconnect")
+    val ALLOWED_SCHEMES = listOf("http", "https", "file", "NfConnect")
 
     /**
      * A list of art url schemes that require a fetch from remote side.
      */
     @JvmStatic
-    private val REMOTE_FETCH_SCHEMES = listOf("file", "kdeconnect")
+    private val REMOTE_FETCH_SCHEMES = listOf("file", "NfConnect")
 
     private val cacheScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
@@ -136,7 +136,7 @@ internal object AlbumArtCache {
         }
         val url = albumUrl.toUri()
 
-        //We currently only support http(s), file, and kdeconnect urls
+        //We currently only support http(s), file, and NfConnect urls
         if (url.scheme !in ALLOWED_SCHEMES) {
             return null
         }
@@ -183,7 +183,7 @@ internal object AlbumArtCache {
         /* If not found, we have not tried fetching it (recently), or a fetch is in-progress.
            Either way, just add it to the fetch queue and starting fetching it if no fetch is running. */
         if (url.scheme in REMOTE_FETCH_SCHEMES) {
-            //Special-case file or kdeconnect, since we need to fetch it from the remote
+            //Special-case file or NfConnect, since we need to fetch it from the remote
             if (url in isFetchingList) return null
             if (!plugin.askTransferAlbumArt(albumUrl, player)) {
                 //It doesn't support transferring the art, so mark it as failed in the memory cache

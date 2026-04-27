@@ -14,11 +14,11 @@ import com.neubofy.nfconnect.base.BaseActivity
 import com.neubofy.nfconnect.extensions.setupBottomPadding
 import com.neubofy.nfconnect.extensions.viewBinding
 import com.neubofy.nfconnect_tp.R
-import com.neubofy.nfconnect_tp.databinding.ActivityAboutKdeBinding
+import com.neubofy.nfconnect_tp.databinding.ActivityAboutNfBinding
 
-class AboutKDEActivity : BaseActivity<ActivityAboutKdeBinding>() {
+class AboutNfActivity : BaseActivity<ActivityAboutNfBinding>() {
 
-    override val binding: ActivityAboutKdeBinding by viewBinding(ActivityAboutKdeBinding::inflate)
+    override val binding: ActivityAboutNfBinding by viewBinding(ActivityAboutNfBinding::inflate)
 
     override val isScrollable: Boolean = true
 
@@ -29,15 +29,15 @@ class AboutKDEActivity : BaseActivity<ActivityAboutKdeBinding>() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
-        binding.aboutTextView.text = fromHtml(resources.getString(R.string.about_kde_about))
-        binding.reportBugsOrWishesTextView.text = fromHtml(resources.getString(R.string.about_kde_report_bugs_or_wishes))
-        binding.joinKdeTextView.text = fromHtml(resources.getString(R.string.about_kde_join_kde))
-        binding.supportKdeTextView.text = fromHtml(resources.getString(R.string.about_kde_support_kde))
+        binding.aboutTextView.text = fromHtml(resources.getString(R.string.about_nf_about))
+        binding.reportBugsOrWishesTextView.text = fromHtml(resources.getString(R.string.about_nf_report_bugs_or_wishes))
+        binding.joinNfTextView.text = fromHtml(resources.getString(R.string.about_nf_join_nf))
+        binding.supportNfTextView.text = fromHtml(resources.getString(R.string.about_nf_support_nf))
 
         binding.aboutTextView.movementMethod = LinkMovementMethod.getInstance()
         binding.reportBugsOrWishesTextView.movementMethod = LinkMovementMethod.getInstance()
-        binding.joinKdeTextView.movementMethod = LinkMovementMethod.getInstance()
-        binding.supportKdeTextView.movementMethod = LinkMovementMethod.getInstance()
+        binding.joinNfTextView.movementMethod = LinkMovementMethod.getInstance()
+        binding.supportNfTextView.movementMethod = LinkMovementMethod.getInstance()
 
         binding.scrollView.setupBottomPadding()
     }

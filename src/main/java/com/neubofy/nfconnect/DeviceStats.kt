@@ -46,7 +46,7 @@ object DeviceStats {
             packetStats.summaries.stream().sorted { o1, o2 ->
                 o2.total compareTo o1.total // Sort them by total number of events
             }.forEach { count ->
-                append(count.packetType.removePrefix("kdeconnect."))
+                append(count.packetType.removePrefix("NfConnect."))
                 append("\n• ")
                 append(count.received)
                 append(" received\n• ")

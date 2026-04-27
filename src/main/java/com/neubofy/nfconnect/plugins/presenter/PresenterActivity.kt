@@ -51,10 +51,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.media.VolumeProviderCompat
 import androidx.preference.PreferenceManager
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.ui.compose.KdeButton
-import com.neubofy.nfconnect.ui.compose.KdeTheme
-import com.neubofy.nfconnect.ui.compose.KdeTopAppBar
+import com.neubofy.nfconnect.ui.compose.NfTheme
+import com.neubofy.nfconnect.ui.compose.NfTopAppBar
 import com.neubofy.nfconnect.extensions.safeDrawPadding
 import com.neubofy.nfconnect_tp.R
 
@@ -65,7 +65,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
 
     private val offScreenControlsSupported = Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU || Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA
     private val mediaSession by lazy {
-        if (offScreenControlsSupported) MediaSessionCompat(this, "kdeconnect") else null
+        if (offScreenControlsSupported) MediaSessionCompat(this, "NfConnect") else null
     }
     private lateinit var plugin : PresenterPlugin
     private var prefsApplied = false
@@ -93,7 +93,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
         prefs!!.registerOnSharedPreferenceChangeListener(this)
         applyPrefs()
 
-        plugin = KdeConnect.getInstance().getDevicePlugin(intent.getStringExtra("deviceId"), PresenterPlugin::class.java)
+        plugin = NfConnect.getInstance().getDevicePlugin(intent.getStringExtra("deviceId"), PresenterPlugin::class.java)
             ?: run {
                 finish()
                 return
@@ -173,7 +173,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
 
         val sensorManager = LocalContext.current.getSystemService(SENSOR_SERVICE) as? SensorManager
 
-        KdeTheme(this) {
+        NfTheme(this) {
             Scaffold(
                 modifier = Modifier.safeDrawPadding(),
                 topBar = { PresenterAppBar() }
@@ -253,7 +253,7 @@ class PresenterActivity : AppCompatActivity(), SensorEventListener, OnSharedPref
 
         var dropdownShownState by remember { mutableStateOf(false) }
 
-        KdeTopAppBar(
+        NfTopAppBar(
             title = stringResource(R.string.pref_plugin_presenter),
             navIconOnClick = { onBackPressedDispatcher.onBackPressed() },
             navIconDescription = getString(androidx.appcompat.R.string.abc_action_bar_up_description),

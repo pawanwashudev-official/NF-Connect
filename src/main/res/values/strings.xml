@@ -13,7 +13,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         All translations for all KDE apps are handled by the [localization team](https://l10n.kde.org).
         We really appreciate your translations, but make sure to submit them by working with the proper team!
   -->
-    <string name="kde_connect">NF Connect</string>
+    <string name="nf_connect">NF Connect</string>
     <string name="manifest_label_share">Send to Device</string>
     <string name="foreground_notification_no_devices">Not connected to any device</string>
     <string name="foreground_notification_devices">Connected to: %s</string>
@@ -541,14 +541,14 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
       <item>dark</item>
     </string-array>
     <string name="report_bug">Report Bug</string>
-    <string name="report_bug_url" translatable="false">https://bugs.kde.org/enter_bug.cgi?product=nfconnect&amp;component=android-application</string>
+    <string name="report_bug_url" translatable="false">https://github.com/pawanwashudev-official/NF-Connect/issues</string>
     <string name="donate">Donate</string>
-    <string name="donate_url" translatable="false">https://kde.org/community/donations/?app=nfconnect-android</string>
+    <string name="donate_url" translatable="false">https://github.com/pawanwashudev-official/NF-Connect</string>
     <string name="source_code">Source Code</string>
-    <string name="source_code_url" translatable="false">https://invent.kde.org/network/nfconnect-android/</string>
+    <string name="source_code_url" translatable="false">https://github.com/pawanwashudev-official/NF-Connect</string>
     <string name="licenses">Licenses</string>
     <string name="website">Website</string>
-    <string name="website_url" translatable="false">https://nfconnect.kde.org/</string>
+    <string name="website_url" translatable="false">https://github.com/pawanwashudev-official/NF-Connect</string>
 
     <string name="about">About</string>
     <string name="authors">Authors</string>
@@ -557,9 +557,9 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     <string name="email_contributor">Email contributor\n%s</string>
     <string name="visit_contributors_homepage">Visit contributor\'s homepage\n%s</string>
     <string name="version">Version %s</string>
-    <string name="about_kde">About KDE</string>
-    <string name="kde_be_free">KDE - Be Free!</string>
-    <string name="kde">KDE</string>
+    <string name="about_neubofy">About Neubofy</string>
+    <string name="kde_be_free">Neubofy - NF Connect</string>
+    <string name="kde">Neubofy</string>
     <string name="konqi">Konqi</string>
     <string name="rise_up">Rise Up</string>
     <string name="rise_down">Rise Down</string>
@@ -572,28 +572,28 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
   <string name="double_tap_to_drag">Double tap to drag</string>
   <string name="hold_to_drag">Hold to drag</string>
 
-    <string name="about_kde_about"><![CDATA[
+    <string name="about_neubofy_about"><![CDATA[
       <h1>About</h1>
       <p>KDE is a world-wide community of software engineers, artists, writers, translators and creators who are committed to <a href="https://www.gnu.org/philosophy/free-sw.html">Free Software</a> development. KDE produces the Plasma desktop environment, hundreds of applications, and the many software libraries that support them.</p>
       <p>KDE is a cooperative enterprise: no single entity controls its direction or products. Instead, we work together to achieve the common goal of building the world\'s finest Free Software. Everyone is welcome to <a href="https://community.kde.org/Get_Involved">join and contribute</a> to KDE, including you.</p>
       Visit <a href="https://www.kde.org/">https://www.kde.org/</a> for more information about the KDE community and the software we produce.
       ]]></string>
 
-    <string name="about_kde_report_bugs_or_wishes"><![CDATA[
+    <string name="about_neubofy_report_bugs_or_wishes"><![CDATA[
       <h1>Report Bugs or Wishes</h1>
       <p>Software can always be improved, and the KDE team is ready to do so. However, you - the user - must tell us when something does not work as expected or could be done better.</p>
       <p>KDE has a bug tracking system. Visit <a href="https://bugs.kde.org/">https://bugs.kde.org/</a> or use the \"Report Bug\" button from the about screen to report bugs.</p>
       If you have a suggestion for improvement then you are welcome to use the bug tracking system to register your wish. Make sure you use the severity called \"Wishlist\".
       ]]></string>
 
-    <string name="about_kde_join_kde"><![CDATA[
+    <string name="about_neubofy_join_kde"><![CDATA[
       <h1>Join KDE</h1>
       <p>You do not have to be a software developer to be a member of the KDE team. You can join the language teams that translate program interfaces. You can provide graphics, themes, sounds, and improved documentation. You decide!</p>
       <p>Visit <a href="https://community.kde.org/Get_Involved">https://community.kde.org/Get_Involved</a> for information on some projects in which you can participate.</p>
       If you need more information or documentation, then a visit to <a href="https://techbase.kde.org/">https://techbase.kde.org/</a> will provide you with what you need.
       ]]></string>
 
-    <string name="about_kde_support_kde"><![CDATA[
+    <string name="about_neubofy_support_kde"><![CDATA[
       <h1>Support KDE</h1>
       <p>KDE software is and will always be available free of charge, however creating it is not free.</p>
       <p>To support development the KDE community has formed the KDE e.V., a non-profit organization legally founded in Germany. KDE e.V. represents the KDE community in legal and financial matters. See <a href="https://ev.kde.org/">https://ev.kde.org/</a> for information on KDE e.V.</p>

@@ -40,8 +40,8 @@ import kotlin.Unit;
 @PluginFactory.LoadablePlugin
 public class RunCommandPlugin extends Plugin {
 
-    private final static String PACKET_TYPE_RUNCOMMAND = "kdeconnect.runcommand";
-    private final static String PACKET_TYPE_RUNCOMMAND_REQUEST = "kdeconnect.runcommand.request";
+    private final static String PACKET_TYPE_RUNCOMMAND = "NfConnect.runcommand";
+    private final static String PACKET_TYPE_RUNCOMMAND_REQUEST = "NfConnect.runcommand.request";
     public final static String KEY_COMMANDS_PREFERENCE = "commands_preference_";
 
     private final ArrayList<JSONObject> commandList = new ArrayList<>();

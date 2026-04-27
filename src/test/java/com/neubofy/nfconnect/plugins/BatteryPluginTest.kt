@@ -230,13 +230,13 @@ class BatteryPluginTest {
     fun checkPacketType() {
         Assert.assertFalse(batteryPlugin.onPacketReceived(NetworkPacket("invalid type")))
 
-        Assert.assertTrue(batteryPlugin.onPacketReceived(NetworkPacket("kdeconnect.battery")))
+        Assert.assertTrue(batteryPlugin.onPacketReceived(NetworkPacket("NfConnect.battery")))
         verify(exactly = 1) { device.onPluginsChanged() }
     }
 
     @Test
     fun processIncomingBatteryInfoPacket() {
-        val packet = NetworkPacket("kdeconnect.battery")
+        val packet = NetworkPacket("NfConnect.battery")
         packet["currentCharge"] = 75
         packet["isCharging"] = true
         packet["thresholdEvent"] = 0

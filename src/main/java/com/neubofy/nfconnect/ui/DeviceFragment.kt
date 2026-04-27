@@ -49,14 +49,14 @@ import com.neubofy.nfconnect.BackgroundService
 import com.neubofy.nfconnect.Device
 import com.neubofy.nfconnect.Device.PluginsChangedListener
 import com.neubofy.nfconnect.helpers.security.SslHelper
-import com.neubofy.nfconnect.KdeConnect
+import com.neubofy.nfconnect.NfConnect
 import com.neubofy.nfconnect.PairingHandler
 import com.neubofy.nfconnect.plugins.battery.BatteryPlugin
 import com.neubofy.nfconnect.plugins.mpris.MprisPlugin
 import com.neubofy.nfconnect.plugins.Plugin
 import com.neubofy.nfconnect.plugins.presenter.PresenterPlugin
 import com.neubofy.nfconnect.plugins.runcommand.RunCommandPlugin
-import com.neubofy.nfconnect.ui.compose.KdeTheme
+import com.neubofy.nfconnect.ui.compose.NfTheme
 import com.neubofy.nfconnect.base.BaseFragment
 import com.neubofy.nfconnect.extensions.setupBottomPadding
 import com.neubofy.nfconnect_tp.R
@@ -88,7 +88,7 @@ class DeviceFragment : BaseFragment<ActivityDeviceBinding>() {
             ?: throw RuntimeException("You must instantiate a new DeviceFragment using DeviceFragment.newInstance()")
     }
 
-    private val device by lazy { KdeConnect.getInstance().getDevice(deviceId) }
+    private val device by lazy { NfConnect.getInstance().getDevice(deviceId) }
 
     /**
      * Not-yet-paired ViewBinding.
@@ -310,7 +310,7 @@ class DeviceFragment : BaseFragment<ActivityDeviceBinding>() {
                     binding.deviceView.visibility = View.VISIBLE
                     binding.deviceViewCompose.apply {
                         setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
-                        setContent { KdeTheme(context) { PluginList(pluginsWithButtons, pluginsNeedPermissions, pluginsNeedOptionalPermissions) } }
+                        setContent { NfTheme(context) { PluginList(pluginsWithButtons, pluginsNeedPermissions, pluginsNeedOptionalPermissions) } }
                     }
                     displayBatteryInfoIfPossible()
                 } else {

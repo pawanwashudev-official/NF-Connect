@@ -27,7 +27,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
-import com.neubofy.nfconnect.KdeConnect;
+import com.neubofy.nfconnect.NfConnect;
 import com.neubofy.nfconnect.plugins.digitizer.DigitizerPlugin;
 import com.neubofy.nfconnect.ui.PluginSettingsActivity;
 import com.neubofy.nfconnect.base.BaseActivity;
@@ -132,7 +132,7 @@ public class MousePadActivity
         final float nX = X;
         final float nY = Y;
 
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -233,7 +233,7 @@ public class MousePadActivity
         boolean mouseButtonsEnabled = prefs
                 .getBoolean(getString(R.string.mousepad_mouse_buttons_enabled_pref), true);
         boolean digitizerEnabled =
-                KdeConnect.getInstance().getDevicePlugin(deviceId, DigitizerPlugin.class) != null;
+                NfConnect.getInstance().getDevicePlugin(deviceId, DigitizerPlugin.class) != null;
 
         menu.findItem(R.id.menu_right_click).setVisible(!mouseButtonsEnabled);
         menu.findItem(R.id.menu_middle_click).setVisible(!mouseButtonsEnabled);
@@ -256,7 +256,7 @@ public class MousePadActivity
             startActivity(intent);
             return true;
         } else if (id == R.id.menu_show_keyboard) {
-            MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+            MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
             if (plugin == null) {
                 finish();
                 return true;
@@ -269,7 +269,7 @@ public class MousePadActivity
             }
             return true;
         } else if (id == R.id.menu_open_compose_send) {
-            MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+            MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
             if (plugin == null) {
                 finish();
                 return true;
@@ -315,7 +315,7 @@ public class MousePadActivity
                 float mCurrentX = event.getX();
                 float mCurrentY = event.getY();
 
-                MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+                MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
                 if (plugin == null) {
                     finish();
                     return true;
@@ -392,7 +392,7 @@ public class MousePadActivity
     public void onLongPress(MotionEvent e) {
         if (!doubleTapDragEnabled) {
             getWindow().getDecorView().performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
-            MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+            MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
             if (plugin == null) {
                 finish();
                 return;
@@ -426,7 +426,7 @@ public class MousePadActivity
 
     @Override
     public boolean onDoubleTap(MotionEvent e) {
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return true;
@@ -486,7 +486,7 @@ public class MousePadActivity
 
 
     private void sendLeftClick() {
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -500,7 +500,7 @@ public class MousePadActivity
     }
 
     private void sendMiddleClick() {
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -509,7 +509,7 @@ public class MousePadActivity
     }
 
     private void sendRightClick() {
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return;
@@ -518,7 +518,7 @@ public class MousePadActivity
     }
 
     private void sendScroll(final double y) {
-        MousePadPlugin plugin = KdeConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
+        MousePadPlugin plugin = NfConnect.getInstance().getDevicePlugin(deviceId, MousePadPlugin.class);
         if (plugin == null) {
             finish();
             return;

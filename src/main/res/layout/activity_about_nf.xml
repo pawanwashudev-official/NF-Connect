@@ -12,7 +12,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="org.kde.nfconnect.ui.about.AboutKDEActivity"
+    tools:context="com.neubofy.nfconnect.ui.about.AboutNfActivity"
     android:fitsSystemWindows="true">
 
     <include layout="@layout/toolbar" android:id="@+id/toolbar_layout" />
@@ -39,8 +39,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 android:layout_margin="24dp"
                 android:text="@string/kde_be_free"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                app:drawableLeftCompat="@drawable/ic_kde_48dp"
-                app:drawableStartCompat="@drawable/ic_kde_48dp"/>
+                app:drawableLeftCompat="@drawable/ic_nf_48dp"
+                app:drawableStartCompat="@drawable/ic_nf_48dp"/>
 
             <com.google.android.material.card.MaterialCardView
                 xmlns:card_view="https://schemas.android.com/apk/res-auto"
@@ -97,7 +97,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 card_view:cardUseCompatPadding="true">
 
                 <TextView
-                    android:id="@+id/join_kde_text_view"
+                    android:id="@+id/join_nf_text_view"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:padding="12dp"
@@ -118,7 +118,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
                 card_view:cardUseCompatPadding="true">
 
                 <TextView
-                    android:id="@+id/support_kde_text_view"
+                    android:id="@+id/support_nf_text_view"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:padding="12dp"

@@ -13,7 +13,7 @@ All this without wires, over the already existing Wi-Fi network, and using TLS e
 
 ## About this app
 
-This is a native Android port of the NF Connect Qt app. You will find a more complete readme about NF Connect [here](https://invent.kde.org/network/nfconnect-kde/).
+This is a native Android port of the NF Connect Qt app. You will find a more complete readme about NF Connect [here](https://github.com/pawanwashudev-official/NF-Connect).
 
 ## How to install this app
 
@@ -21,9 +21,9 @@ You can install this app from the [Play Store](https://play.google.com/store/app
 
 ## Contributing
 
-A lot of useful information, including how to get started working on NF Connect and how to connect with the current developers, is on our [KDE Community Wiki page](https://community.kde.org/nfconnect)
+A lot of useful information, including how to get started working on NF Connect and how to connect with the current developers, is on our [KDE Community Wiki page](https://github.com/pawanwashudev-official/NF-Connect)
 
-For bug reporting, please use [KDE's Bugzilla](https://bugs.kde.org). Please do not use the issue tracker in GitLab since we want to keep everything in one place.
+For bug reporting, please use [GitHub Issues](https://github.com/pawanwashudev-official/NF-Connect/issues). Please do not use the issue tracker in GitLab since we want to keep everything in one place.
 
 To contribute patches, use [NF Connect's Gitlab](https://github.com/pawanwashudev-official/NF-Connect).
 On Gitlab (as well as on our [old Phabricator](https://phabricator.kde.org/tag/kde_connect/)) you can find a task list with stuff to do and links to other relevant resources.
